@@ -1,3 +1,118 @@
+@use 'sass:math';
+@use "../core/ui/mixins" as ui;
 .index-banner{
+  position: relative;
+  &__swiper{}
+  &__slide{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    align-items: center;
+  }
+  &__left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  &__title{
+    @include ui.h1;
+  }
+  &__desc{
+    @include ui.Text18;
+  }
+  &__btn{
+    @include ui.btn-blue;
+  }
+  &__right{}
+  &__img{
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(474,660));
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+
+
+  &__nav{
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__arr{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--White);
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray4);
+
+
+    svg{
+      path{
+        fill: currentColor;
+      }
+    }
+  }
+  &__prev{}
+  &__next{}
+  &__pag{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    --swiper-pagination-color: #d9d9d9;
+    --swiper-pagination-bullet-inactive-color: #d9d9d9;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 0;
+    --swiper-pagination-bullet-width: 52px;
+    --swiper-pagination-bullet-height: 4px;
+    --swiper-pagination-bullet-border-radius: 0;
+
+    .swiper-pagination-bullet{
+      --progress: 0;
+      overflow: hidden;
+      position: relative;
+
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: var(--progress);
+        height: 100%;
+        background: var(--purple);
+      }
+    }
+
+    .swiper-pagination-bullet-active{
+      &:before{
+        width: var(--progress);
+      }
+    }
+  }
 
 }

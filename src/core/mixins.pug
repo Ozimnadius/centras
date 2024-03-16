@@ -1,5 +1,9 @@
-mixin image(imagePath='', imageClass='', imageAlt='img')
-    img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
-
-mixin btn(cls='btn', href='/', attr='', name='Button')
-    a(class=`${cls}`, href=`${href}`, #{${attr}})= name
+mixin top(title)
+    .top
+        .top__title= title
+        a(href="#").top__link
+            span Перейти в раздел
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.21973 17.1906L13.7997 12.6106L9.21973 8.0206L10.6297 6.6106L16.6297 12.6106L10.6297 18.6106L9.21973 17.1906Z" fill="white"/>
+            </svg>
+            

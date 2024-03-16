@@ -1,0 +1,31 @@
+@use "../core/ui/mixins" as ui;
+.top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--Gray5);
+
+  &__title{
+    @include ui.h2;
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @include ui.Text20;
+    color: var(--Gray3);
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          color: var(--MainBlue);
+        }
+    }
+
+    svg{
+      background-color: var(--MainBlue);
+      border-radius: 20px;
+    }
+  }
+
+}

@@ -10,4 +10,184 @@ block variables
 block content
     .index
         .index__banner
+            .container
+                .index-banner
+                    .swiper.index-banner__swiper
+                        .swiper-wrapper
+                            .swiper-slide.index-banner__slide
+                                .index-banner__left
+                                    .index-banner__title Брокерские услуги
+                                    .index-banner__desc Полный доступ к проведению торговых операций на финансовых рынках со всеми видами инструментов
+                                    a(href="#").index-banner__btn Подробнее
+                                .index-banner__right
+                                    .index-banner__img
+                                        img(src='/upload/images/content/index-banner/img.jpg')
+                            .swiper-slide.index-banner__slide
+                                .index-banner__left
+                                    .index-banner__title Брокерские услуги
+                                    .index-banner__desc Полный доступ к проведению торговых операций на финансовых рынках со всеми видами инструментов
+                                    a(href="#").index-banner__btn Подробнее
+                                .index-banner__right
+                                    .index-banner__img
+                                        img(src='/upload/images/content/index-banner/img.jpg')
+                            .swiper-slide.index-banner__slide
+                                .index-banner__left
+                                    .index-banner__title Брокерские услуги
+                                    .index-banner__desc Полный доступ к проведению торговых операций на финансовых рынках со всеми видами инструментов
+                                    a(href="#").index-banner__btn Подробнее
+                                .index-banner__right
+                                    .index-banner__img
+                                        img(src='/upload/images/content/index-banner/img.jpg')
+
+                    .index-banner__nav
+                        button(type='button').index-banner__arr.index-banner__prev
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.777344" y="0.951416" width="24" height="24" rx="12" fill="white"/>
+                            <path d="M16.1873 17.5314L11.6073 12.9514L16.1873 8.36142L14.7773 6.95142L8.77734 12.9514L14.7773 18.9514L16.1873 17.5314Z" fill="#BDBDBD"/>
+                            </svg>
+                        .index-banner__pag
+                        button(type='button').index-banner__arr.index-banner__next
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.777344" y="0.951416" width="24" height="24" rx="12" fill="white"/>
+                            <path d="M9.36719 17.5314L13.9472 12.9514L9.36719 8.36142L10.7772 6.95142L16.7772 12.9514L10.7772 18.9514L9.36719 17.5314Z" fill="#BDBDBD"/>
+                            </svg>
+        .index__advantages
+            .container
+                .index-advantages
+                    .index-advantages__item
+                        .index-advantages__count
+                        .index-advantages__content
+                            .index-advantages__title Инвест Нова
+                            .index-advantages__desc Это команда из аналитиков, трейдеров и финансовых экспертов, которая создаёт решения для бизнеса.
+                    .index-advantages__item
+                        .index-advantages__count
+                        .index-advantages__content
+                            .index-advantages__title Экспертиза
+                            .index-advantages__desc Расскажем, как получать дополнительный доход, привлекать финансирование и управлять рисками.
+                    .index-advantages__item
+                        .index-advantages__count
+                        .index-advantages__content
+                            .index-advantages__title Практика
+                            .index-advantages__desc Обучим сложным финансовым инструментам и разберём примеры.
+        .index__services
+            .container
+                .index-services
+                    .index-services
+                        .index-services__top
+                            +top('Услуги')
+                        .index-services__items
+                            .index-services__item
+                                .index-services__left
+                                    .index-services__img
+                                        img(src="upload/images/content/index-services/1.png" alt="lorem")
+                                .index-services__right
+                                    .index-services__content
+                                        h3 Депозитарные услуги
+                                        p В сответствии с выданной лицензией на осуществление депозитарной деятельности имеет собственный депозитарий, что значительно повышает надежность хранения ценных бумаг клиентов, увеличивает скорость проведения сделок, и дает возможность получения оперативной информации от эмитентов.
+                                        a(href="#") Подробнее
+                            .index-services__item
+                                .index-services__left
+                                    .index-services__img
+                                        img(src="upload/images/content/index-services/2.png" alt="lorem")
+                                .index-services__right
+                                    .index-services__content
+                                        h3 Брокерские услуги
+                                        p Брокерская деятельность основана на принципе предоставления клиентам максимально полного доступа к финансовым рынкам и инструментам.
+                                        a(href="#") Подробнее
+        .index__news
+            .container
+                .index-news
+                    .index-news__top
+                        +top('Новости')
+                    div(data-tabs='root').index-news__bottom
+                        div(data-tabs='btns').index-news__btns
+                            button(type='button' data-tabs='btn').index-news__btn.active о компании
+                            button(type='button' data-tabs='btn').index-news__btn рыночные
+                            button(type='button' data-tabs='btn').index-news__btn КД
+                        div(data-tabs='tabs').index-news__tabs
+                            div(data-tabs='tab').index-news__tab.active
+                                .index-news__items
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/1.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Российский рынок акций: динамика индекса Мосбиржи за неделю и отчетность компаний за 2023 год
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года
+                            div(data-tabs='tab').index-news__tab
+                                .index-news__items
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/1.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Российский рынок акций: динамика индекса Мосбиржи за неделю и отчетность компаний за 2023 год
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года
+                            div(data-tabs='tab').index-news__tab
+                                .index-news__items
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/1.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Российский рынок акций: динамика индекса Мосбиржи за неделю и отчетность компаний за 2023 год
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                                    a(href="#").index-news__item
+                                        span.index-news__img
+                                            img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                                        span.index-news__wrap
+                                            span.index-news__date 29 января 2024
+                                            span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года
+
+
+
+
+
+
+
 

@@ -123,10 +123,6 @@ $break_xs: 575.98px;
 
     li {
       list-style: disc;
-
-      &::marker {
-        color: var(--Red);
-      }
     }
   }
 
@@ -145,12 +141,12 @@ $break_xs: 575.98px;
   }
 
   a {
-    color: var(--Red);
+    color: var(--MainBlue);
     text-decoration: underline;
 
     &:hover {
       @media (hover: hover) and (pointer: fine) {
-        color: var(--Red-2);
+        color: var(--MainRed);
       }
     }
   }

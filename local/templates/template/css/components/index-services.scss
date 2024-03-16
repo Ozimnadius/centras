@@ -1,0 +1,37 @@
+@use "../core/ui/mixins" as ui;
+.index-services{
+  &__top{}
+  &__items{
+    margin-top: 50px;
+  }
+  &__item{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 20px;
+
+    &:nth-child(2){
+      .index-services__left{
+        order: 1;
+      }
+      .index-services__right{
+        padding-right: 50px;
+      }
+    }
+  }
+  &__right{
+    padding-left: 115px;
+  }
+  &__right{}
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    a{
+      @include ui.btn-red;
+    }
+  }
+  &__img{}
+}

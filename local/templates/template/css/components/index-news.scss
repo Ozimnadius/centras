@@ -1,0 +1,106 @@
+@use "../core/ui/mixins" as ui;
+@use "sass:math";
+.index-news {
+  &__top {
+  }
+
+  &__bottom {
+    margin-top: 30px;
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__btn {
+    height: 51px;
+    padding: 0 40px;
+    background-color: #efefef;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 10px;
+
+    &.active {
+      background-color: var(--MainBlue);
+      color: var(--White);
+    }
+
+  }
+
+  &__tabs {
+    margin-top: 35px;
+  }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    display:grid;
+    grid-template-columns: 265px 1fr;
+    gap: 25px;
+    align-items: center;
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          color: var(--MainBlue);
+        }
+    }
+
+    &:nth-child(1) {
+      grid-row: 3 span;
+
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(480,660));
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__date {
+    @include ui.Text16;
+    color: var(--MainBlue);
+  }
+
+  &__desc {
+    @include ui.Text20;
+    font-weight: 600;
+  }
+}

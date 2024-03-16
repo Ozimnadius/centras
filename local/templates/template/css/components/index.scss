@@ -1,0 +1,16 @@
+@use "../core/ui/mixins" as ui;
+.index{
+  padding-top: 40px;
+
+  &__advantages{
+    @include ui.mt(6);
+  }
+
+  &__services{
+    @include ui.mt(6);
+  }
+
+  &__news{
+    @include ui.mt(9);
+  }
+}

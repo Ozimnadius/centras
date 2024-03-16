@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
     initSliders();
     initValidators();
     initLibs();
+    initOther();
 });
 
 function initLibs() {
@@ -10,12 +11,68 @@ function initLibs() {
 
 function initSliders() {
 
+    const indexSlider = new Swiper(
+        ".index-banner__swiper",
+        {
+            spaceBetween: 20,
+            rewind: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: ".index-banner__pag",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".index-banner__next",
+                prevEl: ".index-banner__prev"
+            },
+            on: {
+                autoplayTimeLeft(swiper, timeLeft, percentage) {
+                    let paginationItem = swiper.pagination.bullets[swiper.activeIndex];
+                    paginationItem.style.setProperty('--progress', (1 - percentage) * 100 + '%');
+                },
+                slideChange(swiper) {
+                    for (let i = swiper.activeIndex - 1; i > -1; i--) {
+                        swiper.pagination.bullets[i].style.setProperty('--progress', '100%');
+                    }
+
+                    for (let i = swiper.activeIndex + 1; i < swiper.pagination.bullets.length; i++) {
+                        swiper.pagination.bullets[i].style.setProperty('--progress', '0%');
+                    }
+
+                }
+            },
+
+        });
 }
 
 function initValidators() {
 
 }
 
+function initOther(){
+    const tabsRoot = document.querySelector('[data-tabs="root"]');
+    if (tabsRoot){
+        const btns = tabsRoot.querySelectorAll('[data-tabs="btn"]');
+        const tabs = tabsRoot.querySelectorAll('[data-tabs="tab"]');
+
+        btns.forEach(btn=>{
+            btn.addEventListener('click', (e)=>{
+
+                btns.forEach(btn=>{
+                    btn.classList.remove('active');
+                })
+                e.target.classList.add('active');
+
+                tabs.forEach(tab=>{
+                    tab.classList.remove('active');
+                });
+                tabs[Array.from(btns).indexOf(e.target)].classList.add('active');
+            })
+        })
+    }
+}
 
 class Events {
     constructor() {
