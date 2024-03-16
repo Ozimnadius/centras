@@ -1,0 +1,48 @@
+@use "../core/ui/mixins" as ui;
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  &__item {
+    position: relative;
+
+    &:hover {
+      @media (hover: hover) and (pointer: fine) {
+        .header-menu__sub {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include ui.Text16;
+    @include ui.link-gary1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 15px 5px;
+
+    svg {
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &__sub-item {
+  }
+
+  &__sub-link {
+  }
+}

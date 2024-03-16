@@ -1,0 +1,36 @@
+:root{
+  --font: Mulish, sans-serif;
+  --font-size: 16px;
+  --font-weight: 400;
+  --line-height: 1.42;
+
+  --Black: #2d2d2d;
+  --White: #FFFFFF;
+  --MainRed: #BA1353;
+  --MainBlue: #364FB2;
+  --Gray1: #333333;
+  --Gray3: #828282;
+  --bg: #F6F6F6;
+  --border: #d1d1d1;
+  --purple: #A7B8FB;
+
+
+  --container-width: 1340px;
+  --container-padding: 0 20px;
+
+
+  --transition: 0.4s;
+  --spacing: 10px;
+  @media (max-width: 1919.98px) {
+    --spacing: 8px;
+  }
+  @media (max-width: 1439.98px) {
+    --spacing: 6px;
+  }
+  @media (max-width: 1023.98px) {
+
+  }
+  @media (max-width: 767.98px) {
+    --spacing: 5px;
+  }
+}

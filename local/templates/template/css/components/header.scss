@@ -1,0 +1,81 @@
+@use "../core/ui/mixins" as ui;
+
+.header {
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  &__left {
+  }
+  &__logo {
+  }
+
+  &__center {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+  }
+  &__addr {
+    @include ui.Text16;
+    color: var(--Gray3);
+  }
+  &__mail {
+    a{
+      @include ui.Text16;
+      @include ui.link-gary3;
+    }
+  }
+  &__info{
+    display:grid;
+    justify-items: end;
+  }
+  &__phone {
+    a{
+      @include ui.Numbers24;
+      @include ui.link-gary1;
+    }
+  }
+  &__callback {
+    button{
+      @include ui.Link16;
+      @include ui.link-blue;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__lang {
+  }
+  &__search {
+    a{
+      @include ui.btn-blue;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      height: 30px;
+      padding: 0 16px;
+
+      svg{
+        flex-shrink: 0;
+        path{
+          stroke: currentColor;
+        }
+      }
+    }
+  }
+
+
+  &__bottom {
+  }
+  &__menu {
+  }
+
+}
