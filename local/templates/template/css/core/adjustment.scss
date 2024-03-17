@@ -25,6 +25,13 @@ body {
 
 .page {
   //overflow: hidden;
+  &__breadcrumbs{
+    margin-top: 20px;
+  }
+
+  &__title{
+    margin-top: 20px;
+  }
 }
 
 button{

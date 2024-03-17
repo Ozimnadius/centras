@@ -8,6 +8,16 @@
   @include ui.container;
   max-width: var(--container-width);
   padding: var(--container-padding);
+
+  &--small{
+    max-width: 930px;
+  }
+}
+
+.text{
+  &-24{
+    font-size: 24px;
+  }
 }
 
 @for $i from 1 through 20 {

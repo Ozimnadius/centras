@@ -35,7 +35,7 @@ html(lang="ru")
 
             .wrapper__content
                 if !mainPage
-                    .container
+                    div(class=(contentPage && !showAside)?'container--small':'').container
                         .page__breadcrumbs
                                 include ../components/breadcrumbs/index
                         if showTitle

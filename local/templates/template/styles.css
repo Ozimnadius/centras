@@ -36,9 +36,6 @@
   }
 }
 
-.content {
-  font-size: 14px;
-}
 .content h1 {
   font-weight: 600;
   line-height: 120%;
@@ -67,8 +64,12 @@
 .content h6 {
   font-size: 16px;
 }
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content p, .content ul, .content ol {
-  margin: 1em 0;
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content table {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.content p, .content ul, .content ol, .content iframe, .content blockquote {
+  margin: 20px 0;
 }
 .content ul {
   margin-top: calc(var(--spacing) * 3);
@@ -82,15 +83,31 @@
 .content ul li {
   list-style: disc;
 }
+.content ul li::marker {
+  color: var(--MainRed);
+}
 .content ol {
   list-style: decimal;
   margin-top: calc(var(--spacing) * 3);
   margin-bottom: calc(var(--spacing) * 3);
-  padding-left: 20px;
   font-size: 16px;
   display: -ms-grid;
   display: grid;
   gap: 8px;
+  counter-reset: li;
+}
+.content ol li {
+  list-style: none;
+}
+.content ol li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+  margin-right: 20px;
+  display: inline-block;
+  color: var(--MainRed);
+}
+.content ol li ol {
+  margin-left: 20px;
 }
 .content i {
   font-style: italic;
@@ -107,12 +124,50 @@
 .content b {
   font-weight: 700;
 }
+.content iframe {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  border: none;
+}
+.content blockquote {
+  padding: 12px 0 12px 45px;
+  border-left: 4px solid var(--MainRed);
+  font-size: 24px;
+  font-weight: 700;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  overflow-x: auto;
+}
+.content table td, .content table th {
+  padding: 12px 25px;
+}
+.content table th {
+  background: var(--MainBlue);
+  color: var(--White);
+}
+.content table tbody tr:nth-child(odd) {
+  background-color: var(--Gray5);
+}
+.content img {
+  border-radius: 14px;
+}
 
 .container {
   width: 100%;
   margin: 0 auto;
   max-width: var(--container-width);
   padding: var(--container-padding);
+}
+.container--small {
+  max-width: 930px;
+}
+
+.text-24 {
+  font-size: 24px;
 }
 
 .mt-10 {
@@ -324,6 +379,13 @@ body {
           flex-grow: 1;
 }
 
+.page__breadcrumbs {
+  margin-top: 20px;
+}
+.page__title {
+  margin-top: 20px;
+}
+
 button {
   cursor: pointer;
 }
@@ -364,6 +426,19 @@ h6 {
 
 .ovh {
   overflow: hidden;
+}
+
+.ovxa {
+  overflow-x: auto;
+}
+.ovxa::-webkit-scrollbar {
+  height: 10px;
+  background: #f1f1f1;
+}
+.ovxa::-webkit-scrollbar-thumb {
+  height: 4px;
+  background-color: var(--MainBlue);
+  border-radius: 100px;
 }
 
 .header__top {
