@@ -191,6 +191,12 @@ class Events {
         });
     }
 
+    SetLang(e, elem) {
+        e.preventDefault();
+
+        alert('Language set');
+    }
+
 }
 
 new Events();
