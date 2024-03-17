@@ -437,39 +437,18 @@ h6 {
   gap: 12px;
 }
 .header__search a {
-  border-radius: 100vmax;
-  height: 41px;
-  font-size: 18px;
-  font-weight: 600;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  padding: 13px 29px;
-  border: 1px solid transparent;
-  background-color: transparent;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  background-color: var(--MainBlue);
-  border-color: var(--MainBlue);
-  color: var(--White);
-  display: flex;
-  align-items: center;
   gap: 6px;
   height: 30px;
   padding: 0 16px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .header__search a:hover {
-    color: var(--MainBlue);
-    background-color: transparent;
-  }
+  background: var(--MainBlue);
+  color: var(--White);
+  border-radius: 100vmax;
 }
 .header__search a svg {
   -ms-flex-negative: 0;
@@ -623,6 +602,7 @@ h6 {
 
 .index {
   padding-top: 40px;
+  padding-bottom: 84px;
 }
 .index__advantages {
   margin-top: calc(var(--spacing) * 6);
@@ -632,6 +612,45 @@ h6 {
 }
 .index__news {
   margin-top: calc(var(--spacing) * 9);
+}
+.index__mail {
+  margin-top: calc(var(--spacing) * 6);
+  position: relative;
+}
+.index__mail:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  left: 0;
+  right: 0;
+  background: var(--White);
+}
+.index__mail .container {
+  position: relative;
+  z-index: 1;
+}
+.index__licences {
+  padding: 75px 0;
+  background: var(--White);
+}
+.index__contacts {
+  position: relative;
+}
+.index__contacts:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 55%;
+  left: 0;
+  right: 0;
+  background: var(--White);
+}
+.index__contacts .container {
+  position: relative;
+  z-index: 1;
 }
 
 .index-banner {
@@ -1034,6 +1053,212 @@ h6 {
 .index-news__desc {
   font-size: 20px;
   font-weight: 600;
+}
+
+.index-mail {
+  background: url("/upload/images/content/index-mail/bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding: 90px;
+  border-radius: 20px;
+}
+.index-mail__content {
+  text-align: center;
+  color: var(--White);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.index-mail__content a {
+  color: var(--White);
+  text-decoration: underline;
+}
+@media (hover: hover) and (pointer: fine) {
+  .index-mail__content a:hover {
+    color: var(--MainRed);
+  }
+}
+
+.index-licences__bottom {
+  margin-top: 40px;
+  position: relative;
+}
+.index-licences__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.index-licences__img {
+  position: relative;
+  background-color: #efefef;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.index-licences__img:before {
+  content: "";
+  display: block;
+  padding-top: 76.4434180139%;
+}
+.index-licences__img-wrap {
+  width: 282px;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+}
+.index-licences__img-wrap img {
+  position: relative;
+  z-index: 3;
+  border-radius: 7px;
+}
+.index-licences__shade {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: #f5f5f5;
+  border-radius: 7px;
+  position: absolute;
+  left: -45px;
+  top: 53px;
+}
+.index-licences__shade:before {
+  content: "";
+  display: block;
+  inset: 0;
+  background: #e6e6e6;
+  border-radius: 7px;
+  position: absolute;
+  z-index: 1;
+  left: 16px;
+  top: -20px;
+}
+.index-licences__shade:after {
+  content: "";
+  display: block;
+  inset: 0;
+  background: #d7d7d7;
+  border-radius: 7px;
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  top: -38px;
+}
+.index-licences__desc {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.index-licences__nav {
+  position: absolute;
+  z-index: 11;
+  top: 140px;
+  left: -22px;
+  right: -22px;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.index-licences__arr {
+  pointer-events: all;
+}
+.index-contacts__bottom {
+  margin-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.index-contacts__col {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.index-contacts__col:before {
+  content: "";
+  display: block;
+  padding-top: 102.7164685908%;
+}
+.index-contacts__map {
+  position: absolute;
+  inset: 0;
+}
+.index-contacts__map [class*=copyrights-pane] {
+  display: none !important;
+}
+.index-contacts__map [class*=ground-pane] {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.index-contacts__wrap {
+  position: absolute;
+  inset: 0;
+  background: url("/upload/images/content/index-contacts/bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+.index-contacts__ball {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 16px;
+  width: 251px;
+}
+.index-contacts__ball svg {
+  width: 100%;
+}
+.index-contacts__content {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  right: 60px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: var(--White);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(15.05px);
+          backdrop-filter: blur(15.05px);
+  padding: 75px 55px;
+}
+.index-contacts__name {
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 36px;
+}
+.index-contacts__addr {
+  font-size: 20px;
+  margin-top: 14px;
+}
+.index-contacts__tel {
+  font-weight: 700;
+  line-height: 120%;
+  font-size: 32px;
+  color: var(--White);
+  margin-top: 14px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .index-contacts__tel:hover {
+    color: var(--MainRed);
+  }
+}
+.index-contacts__mail {
+  font-size: 24px;
+  color: var(--White);
+}
+@media (hover: hover) and (pointer: fine) {
+  .index-contacts__mail:hover {
+    color: var(--MainRed);
+  }
 }
 
 .footer {

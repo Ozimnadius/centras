@@ -1,6 +1,7 @@
 @use "../core/ui/mixins" as ui;
 .index{
   padding-top: 40px;
+  padding-bottom: 84px;
 
   &__advantages{
     @include ui.mt(6);
@@ -12,5 +13,52 @@
 
   &__news{
     @include ui.mt(9);
+  }
+
+  &__mail{
+    @include ui.mt(6);
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 50%;
+      left: 0;
+      right: 0;
+      background: var(--White);
+    }
+
+    .container{
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__licences{
+    padding: 75px 0;
+    background: var(--White);
+
+  }
+
+  &__contacts{
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 55%;
+      left: 0;
+      right: 0;
+      background: var(--White);
+    }
+
+    .container{
+      position: relative;
+      z-index: 1;
+    }
   }
 }

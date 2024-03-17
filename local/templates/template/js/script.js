@@ -11,7 +11,7 @@ function initLibs() {
 
 function initSliders() {
 
-    const indexSlider = new Swiper(
+    new Swiper(
         ".index-banner__swiper",
         {
             spaceBetween: 20,
@@ -44,33 +44,74 @@ function initSliders() {
                 }
             },
 
-        });
+        }
+    );
+
+    new Swiper('.index-licences__swiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        rewind: true,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.index-licences__next',
+            prevEl: '.index-licences__prev',
+        },
+    });
 }
 
 function initValidators() {
 
 }
 
-function initOther(){
+function initOther() {
     const tabsRoot = document.querySelector('[data-tabs="root"]');
-    if (tabsRoot){
+    if (tabsRoot) {
         const btns = tabsRoot.querySelectorAll('[data-tabs="btn"]');
         const tabs = tabsRoot.querySelectorAll('[data-tabs="tab"]');
 
-        btns.forEach(btn=>{
-            btn.addEventListener('click', (e)=>{
+        btns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
 
-                btns.forEach(btn=>{
+                btns.forEach(btn => {
                     btn.classList.remove('active');
                 })
                 e.target.classList.add('active');
 
-                tabs.forEach(tab=>{
+                tabs.forEach(tab => {
                     tab.classList.remove('active');
                 });
                 tabs[Array.from(btns).indexOf(e.target)].classList.add('active');
             })
         })
+    }
+    if (document.querySelector('#index-map')) {
+        function init() {
+            let map = new ymaps.Map('index-map', {
+                center: [55.67106206905689, 37.51875749999999],
+                zoom: 16,
+                controls: []
+            });
+
+
+            let placemark = new ymaps.Placemark([55.67106206905689, 37.51875749999999],
+                {
+                    balloonContentHeader: 'ООО «ИнвестНова»:',
+                    balloonContentBody: 'Россия, Москва, 119415, г. Москва, ул. Удальцова д. 1А. Бизнес Центр, 8 этаж',
+                    balloonContentFooter: '+7 (495) 215 10 83',
+                },
+                {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/upload/images/baloon.png',
+                    iconImageSize: [40, 56],
+                    iconImageOffset: [-20, -50]
+                }
+            );
+
+
+            map.geoObjects.add(placemark);
+
+        }
+        ymaps.ready(init);
     }
 }
 
@@ -139,6 +180,14 @@ class Events {
 
         }).catch(function (err) {
             alert('Fetch Error :-S', err);
+        });
+    }
+
+    scrollUp(e,elem){
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
         });
     }
 

@@ -1,0 +1,20 @@
+@use "../core/ui/mixins" as ui;
+.index-mail {
+  background: url("/upload/images/content/index-mail/bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding: 90px;
+  border-radius: 20px;
+
+  &__content {
+    text-align: center;
+    color: var(--White);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+
+    a{
+      @include ui.link-white;
+      text-decoration: underline;
+    }
+  }
+}

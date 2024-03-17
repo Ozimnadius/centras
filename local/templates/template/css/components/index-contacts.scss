@@ -1,0 +1,83 @@
+@use "../core/ui/mixins" as ui;
+@use "sass:math";
+.index-contacts{
+
+
+
+  &__bottom{
+    margin-top: 40px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  }
+
+  &__col{
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(605,589));
+    }
+  }
+
+  &__map{
+    position: absolute;
+    inset: 0;
+
+    [class*="copyrights-pane"] {
+      display: none !important;
+    }
+    [class*="ground-pane"] {
+      filter: grayscale(1);
+    }
+  }
+  &__wrap{
+    position: absolute;
+    inset: 0;
+    background: url("/upload/images/content/index-contacts/bg.jpg") 0 0 no-repeat;
+    background-size: cover;
+  }
+  &__ball{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 16px;
+    width: 251px;
+
+    svg{
+      width: 100%;
+    }
+  }
+  &__content{
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    right: 60px;
+    transform: translateY(-50%);
+    color: var(--White);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15.05px);
+    padding: 75px 55px;
+
+  }
+  &__name{
+    @include ui.h3;
+  }
+  &__addr{
+    @include ui.Text20;
+    margin-top: 14px;
+  }
+  &__tel{
+    @include ui.Numbers32;
+    @include ui.link-white;
+    margin-top: 14px;
+  }
+  &__mail{
+    @include ui.Text24;
+    @include ui.link-white;
+  }
+}

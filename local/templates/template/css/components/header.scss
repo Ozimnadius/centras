@@ -56,12 +56,14 @@
   }
   &__search {
     a{
-      @include ui.btn-blue;
       display: flex;
       align-items: center;
       gap: 6px;
       height: 30px;
       padding: 0 16px;
+      background: var(--MainBlue);
+      color: var(--White);
+      border-radius: 100vmax;
 
       svg{
         flex-shrink: 0;

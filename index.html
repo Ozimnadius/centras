@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/local/templates/template/template_styles.css">
     <script defer src="/local/templates/template/js/libs.min.js"></script>
     <script defer src="/local/templates/template/js/script.js"></script>
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=36c3f91b-4c7f-4118-b05c-efa0cd43a0ab&amp;lang=ru_RU"></script>
   </head>
   <body class="page">
     <div class="wrapper">
@@ -239,6 +240,95 @@
               </div>
             </div>
           </div>
+          <div class="index__mail">
+            <div class="container">
+              <div class="index-mail">
+                <div class="index-mail__content">
+                  <p>Остались вопросы?<br>свяжитесь с нами по почте<br><a href="mailto:mail@centras.ru">mail@centras.ru</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="index__licences">
+            <div class="container">
+              <div class="index-licences">
+                <div class="index-licences__top">
+                  <div class="top">
+                    <div class="top__title">Лицензии</div><a class="top__link" href="#"><span>Перейти в раздел</span><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.21973 17.1906L13.7997 12.6106L9.21973 8.0206L10.6297 6.6106L16.6297 12.6106L10.6297 18.6106L9.21973 17.1906Z" fill="white"/>
+</svg></a>
+                  </div>
+                </div>
+                <div class="index-licences__bottom">
+                  <div class="swiper index-licences__swiper">
+                    <div class="swiper-wrapper"><a class="swiper-slide index-licences__slide" href="/upload/images/content/index-licences/img.png" data-fancybox="licences"><span class="index-licences__img"><span class="index-licences__img-wrap"><span class="index-licences__shade"></span><img src="/upload/images/content/index-licences/img.png" alt="lorem"></span></span><span class="index-licences__desc">Брокерской деятельности № 177-10255-100000 от 07.06.2007 г. Лицензия бессрочная.</span></a><a class="swiper-slide index-licences__slide" href="/upload/images/content/index-licences/img.png" data-fancybox="licences"><span class="index-licences__img"><span class="index-licences__img-wrap"><span class="index-licences__shade"></span><img src="/upload/images/content/index-licences/img.png" alt="lorem"></span></span><span class="index-licences__desc">Дилерской деятельности № 177-10264-010000 от 07.06.2007 г. Лицензия бессрочная.</span></a><a class="swiper-slide index-licences__slide" href="/upload/images/content/index-licences/img.png" data-fancybox="licences"><span class="index-licences__img"><span class="index-licences__img-wrap"><span class="index-licences__shade"></span><img src="/upload/images/content/index-licences/img.png" alt="lorem"></span></span><span class="index-licences__desc">Депозитарной деятельности № 177-10751-000100 от 15.11.2007 г. Лицензия бессрочная.</span></a><a class="swiper-slide index-licences__slide" href="/upload/images/content/index-licences/img.png" data-fancybox="licences"><span class="index-licences__img"><span class="index-licences__img-wrap"><span class="index-licences__shade"></span><img src="/upload/images/content/index-licences/img.png" alt="lorem"></span></span><span class="index-licences__desc">Брокерской деятельности № 177-10255-100000 от 07.06.2007 г. Лицензия бессрочная.</span></a></div>
+                  </div>
+                  <div class="index-licences__nav">
+                    <button class="index-licences__arr index-licences__prev" type="button"><svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.333984" y="0.807129" width="44" height="44" rx="22" fill="white"/>
+<path d="M28.586 31.2038L20.1893 22.8071L28.586 14.3921L26.001 11.8071L15.001 22.8071L26.001 33.8071L28.586 31.2038Z" fill="#BDBDBD"/>
+</svg>
+                    </button>
+                    <button class="index-licences__arr index-licences__next" type="button"><svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.959961" y="0.807129" width="44" height="44" rx="22" fill="white"/>
+<path d="M16.708 31.2038L25.1047 22.8071L16.708 14.3921L19.293 11.8071L30.293 22.8071L19.293 33.8071L16.708 31.2038Z" fill="#BDBDBD"/>
+</svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="index__contacts">
+            <div class="container">
+              <div class="index-contacts">
+                <div class="index-contacts__top">
+                  <div class="top">
+                    <div class="top__title">Контактная информация</div>
+                  </div>
+                </div>
+                <div class="index-contacts__bottom">
+                  <div class="index-contacts__col">
+                    <div class="index-contacts__map" id="index-map"></div>
+                  </div>
+                  <div class="index-contacts__col">
+                    <div class="index-contacts__wrap">
+                      <div class="index-contacts__ball"><svg width="236" height="193" viewBox="0 0 236 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_131_2404" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="236" height="236">
+<path d="M0.617188 117.018C0.617188 181.656 53.2455 234.044 118.18 234.044C183.114 234.044 235.743 181.643 235.743 117.018C235.743 52.3933 183.101 -0.0078125 118.18 -0.0078125C53.2586 -0.0078125 0.617188 52.3933 0.617188 117.018Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_131_2404)">
+<path d="M105.402 -116.344L-116.252 129.738L130.959 350.38L352.613 104.298L105.402 -116.344Z" fill="url(#paint0_radial_131_2404)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_131_2404" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(143.332 71.9189) rotate(132.01) scale(221.497 197.941)">
+<stop stop-color="#6B7ABA"/>
+<stop offset="0.14" stop-color="#6676B7"/>
+<stop offset="0.28" stop-color="#5A6CB1"/>
+<stop offset="0.41" stop-color="#495DA8"/>
+<stop offset="0.51" stop-color="#4056A2"/>
+<stop offset="0.58" stop-color="#39509E"/>
+<stop offset="0.67" stop-color="#2E4395"/>
+<stop offset="0.68" stop-color="#2D4294"/>
+<stop offset="0.73" stop-color="#29387C"/>
+<stop offset="0.81" stop-color="#23264E"/>
+<stop offset="1" stop-color="#252752"/>
+</radialGradient>
+</defs>
+</svg>
+                      </div>
+                      <div class="index-contacts__content">
+                        <div class="index-contacts__name">ООО «ИнвестНова»:</div>
+                        <div class="index-contacts__addr">Россия, Москва, 119415, г. Москва, ул. Удальцова д. 1А. Бизнес Центр, 8 этаж</div>
+                        <div class="index-contacts__tel"><a href="tel:+7(495)2151083">+7 (495) 215 10 83</a></div>
+                        <div class="index-contacts__mail"><a href="mailto:mail@centras.ru">mail@centras.ru</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="wrapper__footer">
@@ -247,7 +337,7 @@
             <div class="container">
               <div class="footer__top-container">
                 <div class="footer__up">
-                  <button type="button"><svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button type="button" data-event="click.scrollUp"><svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="25.4512" cy="25.0378" r="24.0182" stroke="#A7B8FB" stroke-width="1.96355"/>
 <path d="M21.3358 28.6295L25.9258 24.0495L30.5158 28.6295L31.9258 27.2195L25.9258 21.2195L19.9258 27.2195L21.3358 28.6295Z" fill="#A7B8FB"/>
 </svg>
