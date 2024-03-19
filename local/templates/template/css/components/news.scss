@@ -1,0 +1,12 @@
+@use "../core/ui/mixins" as ui;
+.news{
+  &__top{}
+
+  &__title{
+    @include ui.h1;
+  }
+  &__bottom{
+    margin-top: 35px;
+  }
+
+}

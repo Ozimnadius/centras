@@ -1,0 +1,25 @@
+@use "../core/ui/mixins" as ui;
+.page-menu{
+  padding: 5px 30px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  &__item{
+    @include ui.link-gray1-blue;
+    display: block;
+    border-bottom: 1px solid var(--border);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 0;
+
+    &:last-child{
+      border: none;
+    }
+
+    &.active{
+      color: var(--MainRed);
+    }
+  }
+
+
+}

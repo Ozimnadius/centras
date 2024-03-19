@@ -107,12 +107,12 @@ $break_xs: 575.98px;
 @mixin content() {
   @include headers;
 
-  h1, h2, h3, h4, h5, h6, table  {
+  h1, h2, h3, h4, h5, h6, table {
     margin-top: 40px;
     margin-bottom: 20px;
   }
 
-  p, ul, ol, iframe, blockquote{
+  p, ul, ol, iframe, blockquote {
     margin: 20px 0;
   }
 
@@ -127,7 +127,7 @@ $break_xs: 575.98px;
     li {
       list-style: disc;
 
-      &::marker{
+      &::marker {
         color: var(--MainRed);
       }
     }
@@ -142,8 +142,9 @@ $break_xs: 575.98px;
     gap: 8px;
     counter-reset: li;
 
-    li{
+    li {
       list-style: none;
+
       &:before {
         counter-increment: li;
         content: counters(li, ".") ". ";
@@ -177,50 +178,52 @@ $break_xs: 575.98px;
     font-weight: 700;
   }
 
-  iframe{
+  iframe {
     width: 100%;
     display: block;
     aspect-ratio: 16/9;
     border: none;
   }
 
-  blockquote{
+  blockquote {
     padding: 12px 0 12px 45px;
     border-left: 4px solid var(--MainRed);
     font-size: 24px;
     font-weight: 700;
   }
 
-  table{
+  table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
     overflow-x: auto;
 
-    td,th{
+    td, th {
       padding: 12px 25px;
     }
 
-    th{
+    th {
       background: var(--MainBlue);
       color: var(--White);
     }
-    
-    tbody{
-      tr{
-        &:nth-child(odd){
+
+    tbody {
+      tr {
+        &:nth-child(odd) {
           background-color: var(--Gray5);
         }
       }
     }
 
 
-
-
   }
 
-  img{
+  img {
     border-radius: 14px;
+  }
+
+  & > :nth-child(1) {
+    margin-top: 0;
   }
 
 }
@@ -291,7 +294,7 @@ $break_xs: 575.98px;
 
   &:hover {
     @media (hover: hover) and (pointer: fine) {
-      color: var(--MainRed);
+      color: var(--RedLight);
     }
   }
 }
@@ -299,9 +302,23 @@ $break_xs: 575.98px;
 @mixin link-blue {
   color: var(--MainBlue);
 
+  &:visited{
+    color: var(--MainBlue);
+  }
+
   &:hover {
     @media (hover: hover) and (pointer: fine) {
       color: var(--MainRed);
+    }
+  }
+}
+
+@mixin link-red {
+  color: var(--MainRed);
+
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
+      color: var(--MainBlue);
     }
   }
 }
@@ -312,6 +329,16 @@ $break_xs: 575.98px;
   &:hover {
     @media (hover: hover) and (pointer: fine) {
       color: var(--MainRed);
+    }
+  }
+}
+
+@mixin link-gray1-blue {
+  color: var(--Gray1);
+
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
+      color: var(--MainBlue);
     }
   }
 }
@@ -331,7 +358,7 @@ $break_xs: 575.98px;
 
   &:hover {
     @media (hover: hover) and (pointer: fine) {
-      color: var(--MainRed);
+      color: var(--RedLight);
     }
   }
 }
@@ -387,8 +414,8 @@ $break_xs: 575.98px;
 
   &:hover {
     @media (hover: hover) and (pointer: fine) {
-      color: var(--MainBlue);
-      background-color: transparent;
+      background-color: var(--MainRed);
+      border-color: var(--MainRed);
     }
   }
 }
@@ -401,8 +428,37 @@ $break_xs: 575.98px;
 
   &:hover {
     @media (hover: hover) and (pointer: fine) {
-      color: var(--MainRed);
-      background-color: transparent;
+      background-color: var(--MainBlue);
+      border-color: var(--MainBlue);
+    }
+  }
+}
+
+@mixin btn-border-blue {
+  @include btn;
+  background-color: transparent;
+  border-color: var(--MainBlue);
+  color: var(--MainBlue);
+
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
+      background-color: var(--MainBlue);
+      color: var(--White);
+    }
+  }
+}
+
+@mixin btn-border-gray3 {
+  @include btn;
+  background-color: transparent;
+  border-color: var(--Gray3);
+  color: var(--Gray3);
+
+  &:hover {
+    @media (hover: hover) and (pointer: fine) {
+      border-color: var(--MainRed);
+      background-color: var(--MainRed);
+      color: var(--White);
     }
   }
 }

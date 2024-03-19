@@ -64,6 +64,14 @@
       background: var(--MainBlue);
       color: var(--White);
       border-radius: 100vmax;
+      @include ui.tr;
+
+
+      &:hover {
+          @media (hover: hover) and (pointer: fine) {
+            background: var(--MainRed);
+          }
+      }
 
       svg{
         flex-shrink: 0;

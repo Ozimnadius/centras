@@ -5,3 +5,4 @@
 // @prepros-append ../libs/inputmask/dist/jquery.inputmask.min.js
 // @prepros-append ../libs/jquery-validation/dist/jquery.validate.js
 // @prepros-append ../libs/toastr/build/toastr.min.js
+// @prepros-append ../libs/choices.js/public/assets/scripts/choices.min.js

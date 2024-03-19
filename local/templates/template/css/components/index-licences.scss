@@ -12,6 +12,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          color: var(--MainRed);
+        }
+    }
   }
   &__top{}
   &__img{

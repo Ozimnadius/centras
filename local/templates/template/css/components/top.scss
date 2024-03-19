@@ -8,23 +8,32 @@
 
   &__title{
     @include ui.h2;
+    max-width: 1100px;
   }
 
   &__link{
+    @include ui.Text20;
     display: flex;
     align-items: center;
     gap: 16px;
-    @include ui.Text20;
     color: var(--Gray3);
+    //transition: color var(--transition);
+
     &:hover {
         @media (hover: hover) and (pointer: fine) {
-          color: var(--MainBlue);
+          color: var(--MainRed);
+
+          svg{
+            background-color: var(--MainRed);
+          }
         }
     }
 
     svg{
       background-color: var(--MainBlue);
       border-radius: 20px;
+      //transition: background-color var(--transition);
+
     }
   }
 

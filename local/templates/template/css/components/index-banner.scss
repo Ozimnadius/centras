@@ -58,22 +58,34 @@
     gap: 20px;
   }
   &__arr{
+    --bg: var(--White);
+    --color: var(--Gray4);
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background: var(--White);
-
     flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--Gray4);
 
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          --bg: var(--MainRed);
+          --color: var(--White);
+        }
+    }
+
 
     svg{
+      rect{
+        fill: var(--bg);
+        @include ui.tr;
+      }
       path{
-        fill: currentColor;
+        fill: var(--color);
+        @include ui.tr;
       }
     }
   }

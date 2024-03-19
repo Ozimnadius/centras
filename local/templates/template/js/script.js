@@ -7,6 +7,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
 function initLibs() {
 
+    document.querySelectorAll('[data-choices]').forEach(i => {
+        new Choices(i, {
+            shouldSort: false,
+            searchEnabled: false,
+        });
+
+    });
 }
 
 function initSliders() {
@@ -195,6 +202,50 @@ class Events {
         e.preventDefault();
 
         alert('Language set');
+    }
+
+    openArchive(e, elem){
+        e.preventDefault();
+
+        elem.classList.toggle('active');
+        elem.closest('[data-root]').querySelector('[data-target]').classList.toggle('active');
+    }
+
+    showMoreNews(e, elem){
+        e.preventDefault();
+        const target = elem.closest('[data-root]').querySelector('[data-target]');
+        fetch('/ajax/news.php', {
+            method: 'POST',
+            body: new FormData()
+        }).then(response => response.json()).then(function (data) {
+
+            if (data.status) {
+                target.insertAdjacentHTML('beforeend',data.html)
+            } else {
+                toastr["error"](data.error);
+            }
+
+        }).catch(function (err) {
+            alert('Fetch Error :-S', err);
+        });
+
+    }
+
+    setCokieWithReload(e, elem) {
+
+        let form = elem.closest('form');
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+        })
+            .then(response => response.json())
+            .then(function (data) {
+                location.reload();
+            })
+            .catch(function (err) {
+                alert('Fetch Error :-S', err);
+            });
     }
 
 }

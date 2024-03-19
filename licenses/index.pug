@@ -1,0 +1,100 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Лицензии';
+    - var mainPage = false;
+    - var showTitle = true;
+    - var contentPage = false;
+    - var showAside = true;
+
+block aside
+    .page__menu
+        .page-menu
+            a(href="#").page-menu__item.active Основные сведения
+            a(href="#").page-menu__item Лицензии
+            a(href="#").page-menu__item Членство в СРО
+            a(href="#").page-menu__item Судебные споры
+            a(href="#").page-menu__item Информация о технических сбоях
+            a(href="#").page-menu__item Инфраструктура, используемая компанией
+            a(href="#").page-menu__item Реквизиты компании
+
+block content
+    .licenses
+        .licenses__desc.content
+            p
+                | С информацией о лицензиях можно ознакомиться на сайте&nbsp;
+                a(href="#") ЦБ РФ.
+                | &nbsp;Согласно&nbsp;
+                a(href="#") Информационного письма Банка
+                | &nbsp;России выписки из реестра профессиональных участников рынка ценных бумаг приравниваются по юридической значимости к лицензиям, выданным Банком России на бумажном носителе до 1 марта 2019 года.
+        .licenses__items
+            each i in [1, 2, 3]
+                .licenses__item
+                    div(data-root).license
+                        .license__top
+                            .license__row
+                                .license__left
+                                    .license__img
+                                        .license__img-wrap
+                                            .license__shadow
+                                            img(src="/upload/images/content/index-licences/img.png" alt="lorem")
+                                .license__right
+                                    .license__title Дилерской деятельности № 177-10264-010000
+                                    .license__dates
+                                        .license__date Дата публикации: 26.07.2023
+                                        .license__date Доступно до: бессрочно
+                                    .license__btns
+                                        a(href="#" download).license__download Скачать в PDF
+                                        a(href="/upload/images/content/index-licences/img.png" data-fancybox="licences").license__show Смотреть
+                                        button(type='button' data-event='click.openArchive').license__open-archive
+                                            span Архив
+                                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.94 6.21997L8 9.27997L11.06 6.21997L12 7.16664L8 11.1666L4 7.16664L4.94 6.21997Z" fill="currentCollor"/>
+                                            </svg>
+                        div(data-target).license__bottom
+                            .license__archive
+                                .license-archive
+                                    .license-archive__item
+                                        .license__row
+                                            .license__left
+                                                .license__img2
+                                                    <svg width="55" height="56" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_137_8903)">
+                                                    <path d="M36.6385 -0.0643311H18.6385C16.1635 -0.0643311 14.1385 1.99817 14.1385 4.519V41.1857C14.1385 43.7065 16.1635 45.769 18.6385 45.769H45.6385C48.1135 45.769 50.1385 43.7065 50.1385 41.1857V13.6857L36.6385 -0.0643311ZM45.6385 41.1857H18.6385V4.519H34.3885V15.9773H45.6385V41.1857ZM9.63855 9.10234V50.3523H45.6385V54.9357H9.63855C7.16355 54.9357 5.13855 52.8732 5.13855 50.3523V9.10234H9.63855ZM23.1385 22.8523V27.4357H41.1385V22.8523H23.1385ZM23.1385 32.019V36.6023H34.3885V32.019H23.1385Z" fill="#BDBDBD"/>
+                                                    </g>
+                                                    <defs>
+                                                    <clipPath id="clip0_137_8903">
+                                                    <rect width="54" height="55" fill="white" transform="translate(0.63855 0.204346)"/>
+                                                    </clipPath>
+                                                    </defs>
+                                                    </svg>
+                                            .license__right
+                                                .license__title Дилерской деятельности № 177-10264-010000
+                                                .license__dates
+                                                    .license__date Дата публикации: 26.07.2023
+                                                    .license__date Доступно до: бессрочно
+                                                .license__btns
+                                                    a(href="#" download).license__download Скачать в PDF
+                                                    a(href="/upload/images/content/index-licences/img.png" data-fancybox="licences").license__show Смотреть
+                                    .license-archive__item
+                                        .license__row
+                                            .license__left
+                                                .license__img2
+                                                    <svg width="55" height="56" viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_137_8903)">
+                                                    <path d="M36.6385 -0.0643311H18.6385C16.1635 -0.0643311 14.1385 1.99817 14.1385 4.519V41.1857C14.1385 43.7065 16.1635 45.769 18.6385 45.769H45.6385C48.1135 45.769 50.1385 43.7065 50.1385 41.1857V13.6857L36.6385 -0.0643311ZM45.6385 41.1857H18.6385V4.519H34.3885V15.9773H45.6385V41.1857ZM9.63855 9.10234V50.3523H45.6385V54.9357H9.63855C7.16355 54.9357 5.13855 52.8732 5.13855 50.3523V9.10234H9.63855ZM23.1385 22.8523V27.4357H41.1385V22.8523H23.1385ZM23.1385 32.019V36.6023H34.3885V32.019H23.1385Z" fill="#BDBDBD"/>
+                                                    </g>
+                                                    <defs>
+                                                    <clipPath id="clip0_137_8903">
+                                                    <rect width="54" height="55" fill="white" transform="translate(0.63855 0.204346)"/>
+                                                    </clipPath>
+                                                    </defs>
+                                                    </svg>
+                                            .license__right
+                                                .license__title Дилерской деятельности № 177-10264-010000
+                                                .license__dates
+                                                    .license__date Дата публикации: 26.07.2023
+                                                    .license__date Доступно до: бессрочно
+                                                .license__btns
+                                                    a(href="#" download).license__download Скачать в PDF
+                                                    a(href="/upload/images/content/index-licences/img.png" data-fancybox="licences").license__show Смотреть

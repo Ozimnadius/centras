@@ -1,37 +1,45 @@
-.header-lang{
+@use "../core/ui/mixins" as ui;
+.header-lang {
+  --bg: var(--MainBlue);
   width: 90px;
-  display:block;
+  display: block;
   cursor: pointer;
 
+  &:hover {
+      @media (hover: hover) and (pointer: fine) {
+        --bg: var(--MainRed);
+      }
+  }
 
-  &__input{
+  &__input {
     display: none;
 
-    &:checked+.header-lang__fake{
-      &:before{
+    &:checked + .header-lang__fake {
+      &:before {
         right: initial;
         left: 0;
       }
 
-      span{
-        &:nth-child(1){
+      span {
+        &:nth-child(1) {
           color: var(--White);
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
           color: var(--MainBlue);
         }
       }
     }
   }
 
-  &__fake{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    background: rgba(#334798,.2);
+  &__fake {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: rgba(#334798, .2);
     border-radius: 40px;
     position: relative;
 
-    span{
+    span {
       color: var(--MainBlue);
       position: relative;
       z-index: 1;
@@ -43,12 +51,12 @@
       font-weight: 600;
       font-size: 18px;
 
-      &:nth-child(2){
+      &:nth-child(2) {
         color: var(--White);
       }
     }
 
-    &:before{
+    &:before {
       content: '';
       width: 48px;
       height: 30px;
@@ -56,7 +64,8 @@
       top: 0;
       right: 0;
       border-radius: 40px;
-      background: var(--MainBlue);
+      background: var(--bg);
+      @include ui.tr;
     }
 
   }

@@ -1,0 +1,147 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Новости';
+    - var mainPage = false;
+    - var showTitle = false;
+    - var contentPage = false;
+    - var showAside = false;
+
+block aside
+
+
+block content
+    .news
+        .news__top
+            .top
+                .top__title.news__title Новости
+                .top__sort
+                    form(action='/ajax/setCokie.php' method='post' data-event="change.setCokieWithReload").sort
+                        .sort__name Фильтр:
+                        .sort__values
+                            select(name='newssort' data-choices )
+                                option(value='created_date') По новизне
+                                option(value='name') По имени
+                                option(value='show_counter') По популярности
+        div(data-tabs='root').news__bottom
+            div(data-tabs='btns').index-news__btns
+                button(type='button' data-tabs='btn').index-news__btn.active о компании
+                button(type='button' data-tabs='btn').index-news__btn рыночные
+                button(type='button' data-tabs='btn').index-news__btn КД
+            div(data-tabs='tabs').index-news__tabs
+                div(data-tabs='tab' data-root).index-news__tab.active
+                    div(data-target).index-news__items
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/1.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Российский рынок акций: динамика индекса Мосбиржи за неделю и отчетность компаний за 2023 год
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года
+                    .index-news__more
+                        button(type='button' data-event='click.showMoreNews') Загрузить еще
+                div(data-tabs='tab').index-news__tab
+                    .index-news__items
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/1.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Российский рынок акций: динамика индекса Мосбиржи за неделю и отчетность компаний за 2023 год
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года
+                div(data-tabs='tab').index-news__tab
+                    .index-news__items
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/1.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Российский рынок акций: динамика индекса Мосбиржи за неделю и отчетность компаний за 2023 год
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/2.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Инфляция в России в январе 2024 года и прогноз ключевой ставки по месяцам
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/3.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Тренд или новая реальность? Рынок криптовалют
+                        a(href="#").index-news__item
+                            span.index-news__img
+                                img(src="/upload/images/content/index-news/4.jpg" alt="lorem")
+                            span.index-news__wrap
+                                span.index-news__date 29 января 2024
+                                span.index-news__desc Курс юаня к рублю и к доллару: что влияло на котировки в январе 2024 года

@@ -14,7 +14,7 @@
     &:hover {
       @media (hover: hover) and (pointer: fine) {
         .header-menu__sub {
-          display: block;
+          display: flex;
         }
       }
     }
@@ -40,11 +40,24 @@
     position: absolute;
     top: 100%;
     left: 0;
+    width: 280px;
+
+    flex-direction: column;
+    padding: 10px 20px;
+    background: var(--White);
+    border-radius: 10px;
   }
 
   &__sub-item {
+    border-bottom: 1px solid var(--border);
+    &:last-child{
+      border-color: transparent;
+    }
   }
 
   &__sub-link {
+    padding: 10px 0;
+    display: block;
+    @include ui.link-gary1;
   }
 }

@@ -22,6 +22,13 @@
     text-transform: uppercase;
     border-radius: 10px;
 
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+          background-color: var(--MainRed);
+          color: var(--White);
+        }
+    }
+
     &.active {
       background-color: var(--MainBlue);
       color: var(--White);
@@ -54,7 +61,7 @@
     align-items: center;
     &:hover {
         @media (hover: hover) and (pointer: fine) {
-          color: var(--MainBlue);
+          color: var(--MainRed);
         }
     }
 
@@ -102,5 +109,22 @@
   &__desc {
     @include ui.Text20;
     font-weight: 600;
+  }
+
+  &__more{
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+
+    &:before,&:after{
+      content: '';
+      height: 1px;
+      flex-grow: 1;
+      background-color: var(--Gray5);
+    }
+
+    button{
+      @include ui.btn-border-blue;
+    }
   }
 }

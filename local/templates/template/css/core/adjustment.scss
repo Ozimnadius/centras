@@ -32,10 +32,29 @@ body {
   &__title{
     margin-top: 20px;
   }
+
+  &__grid{
+    margin-top: 25px;
+    margin-bottom: 100px;
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap: 130px;
+
+    &--noaside{
+      grid-template-columns: 100%;
+    }
+  }
 }
 
 button{
   cursor: pointer;
+}
+
+a{
+  color: currentColor;
+  &:visited{
+    color: currentColor;
+  }
 }
 
 @include ui.headers;
