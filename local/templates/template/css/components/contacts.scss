@@ -1,0 +1,112 @@
+@use "sass:math";
+.contacts {
+
+  &__items {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  &__item {
+    border-left: 1px solid #cecece;
+    padding: 15px 35px;
+
+
+    &:first-child{
+      border: none;
+      padding-left: 0;
+    }
+  }
+
+  &__map {
+    margin-top: 25px;
+    position: relative;
+    border-radius: 13px;
+    overflow: hidden;
+    [class*="copyrights-pane"] {
+      display: none !important;
+    }
+    [class*="ground-pane"] {
+      filter: grayscale(1);
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(632,1340));
+    }
+  }
+
+  &__map-inner{
+    position: absolute;
+    inset: 0;
+  }
+
+  &__bottom {
+    margin-top: 50px;
+  }
+}
+
+.contact {
+  display:grid;
+  gap: 18px;
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #4f4f4f;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__content {
+    font-size: 18px;
+
+    b{
+      color: var(--MainBlue);
+      font-weight: 500;
+    }
+  }
+}
+
+.contacts-director {
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--MainBlue);
+  }
+
+  &__info {
+    font-size: 18px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: end;
+
+    a{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: underline;
+      color: var(--MainBlue);
+      &:hover {
+          @media (hover: hover) and (pointer: fine) {
+            color: var(--MainRed);
+          }
+      }
+
+      svg{
+        path{
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}

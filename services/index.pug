@@ -1,0 +1,35 @@
+extends ../src/core/main
+
+block variables
+    - var title = 'Услуги';
+    - var mainPage = false;
+    - var showTitle = true;
+    - var contentPage = false;
+    - var showAside = false;
+
+block aside
+
+block content
+    .services
+        .services__desc Основными видами деятельности ООО «ИнвестНова» являются: брокерская, депозитарная деятельность, дилерская деятельность, а также иная деятельность не запрещенная действующим законодательством для профессиональных участников финансового рынка.
+        .services__items
+            .index-services
+                .index-services__items
+                    .index-services__item
+                        .index-services__left
+                            .index-services__img
+                                img(src="/upload/images/content/index-services/1.png" alt="lorem")
+                        .index-services__right
+                            .index-services__content
+                                h3 Депозитарные услуги
+                                p В сответствии с выданной лицензией на осуществление депозитарной деятельности имеет собственный депозитарий, что значительно повышает надежность хранения ценных бумаг клиентов, увеличивает скорость проведения сделок, и дает возможность получения оперативной информации от эмитентов.
+                                a(href="#") Подробнее
+                    .index-services__item
+                        .index-services__left
+                            .index-services__img
+                                img(src="/upload/images/content/index-services/2.png" alt="lorem")
+                        .index-services__right
+                            .index-services__content
+                                h3 Брокерские услуги
+                                p Брокерская деятельность основана на принципе предоставления клиентам максимально полного доступа к финансовым рынкам и инструментам.
+                                a(href="#") Подробнее

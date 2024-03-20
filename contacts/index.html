@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Контакты</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/local/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/local/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/local/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/local/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/local/templates/template/css/libs.css">
+    <link rel="stylesheet" href="/local/templates/template/styles.css">
+    <!-- Для изменений после верстки-->
+    <link rel="stylesheet" href="/local/templates/template/template_styles.css">
+    <script defer src="/local/templates/template/js/libs.min.js"></script>
+    <script defer src="/local/templates/template/js/script.js"></script>
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=36c3f91b-4c7f-4118-b05c-efa0cd43a0ab&amp;lang=ru_RU"></script>
+  </head>
+  <body class="page">
+    <div class="wrapper">
+      <div class="wrapper__header">
+        <div class="container">
+          <header class="header">
+            <div class="header__top">
+              <div class="header__left">
+                <div class="header__logo"><a href="/"><img src="/upload/images/logo.png"></a></div>
+              </div>
+              <div class="header__center">
+                <div class="header__addr">Россия, г. Москва, 119415,<br>ул.Удальцова д. 1А. Бизнес Центр, 8 этаж</div>
+                <div class="header__mail"><a href="mailto:mail@centras.ru">mail@centras.ru</a></div>
+                <div class="header__info">
+                  <div class="header__phone"><a href="tel:+7(495)2151083">+7 (495) 215 10 83</a></div>
+                  <div class="header__callback">
+                    <button type="button">Обратный звонок</button>
+                  </div>
+                </div>
+              </div>
+              <div class="header__right">
+                <div class="header__lang">
+                  <label class="header-lang">
+                    <input class="header-lang__input" type="checkbox" name="lang" checked data-event="change.SetLang"><span class="header-lang__fake"><span class="header-lang__ru">Ru</span><span class="header-lang__en">En</span></span>
+                  </label>
+                </div>
+                <div class="header__search"><a href="#"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3536 11.4876L14.9258 14.2175M13.0874 7.20912C13.0874 10.5182 10.3649 13.2007 7.00658 13.2007C3.64825 13.2007 0.925781 10.5182 0.925781 7.20912C0.925781 3.90005 3.64825 1.21753 7.00658 1.21753C10.3649 1.21753 13.0874 3.90005 13.0874 7.20912Z" stroke="white" stroke-width="1.73648"/>
+</svg><span>Поиск</span></a></div>
+              </div>
+            </div>
+            <div class="header__bottom">
+              <div class="header-menu">
+                <div class="header-menu__item"><a class="header-menu__link" href="/about/"><span>О компании</span></a></div>
+                <div class="header-menu__item"><a class="header-menu__link" href="/news/"><span>Новости</span></a></div>
+                <div class="header-menu__item"><a class="header-menu__link" href="/info/"><span>Информация для клиентов</span><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.28309 6.88647L9.72559 10.329L13.1681 6.88647L14.2256 7.95147L9.72559 12.4515L5.22559 7.95147L6.28309 6.88647Z" fill="#333333"/>
+</svg></a>
+                  <div class="header-menu__sub">
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item"><a class="header-menu__link" href="/legal/"><span>Правовой режим</span><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.28309 6.88647L9.72559 10.329L13.1681 6.88647L14.2256 7.95147L9.72559 12.4515L5.22559 7.95147L6.28309 6.88647Z" fill="#333333"/>
+</svg></a>
+                  <div class="header-menu__sub">
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item"><a class="header-menu__link" href="/financial/"><span>Финансовая информация</span><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.28309 6.88647L9.72559 10.329L13.1681 6.88647L14.2256 7.95147L9.72559 12.4515L5.22559 7.95147L6.28309 6.88647Z" fill="#333333"/>
+</svg></a>
+                  <div class="header-menu__sub">
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                    <div class="header-menu__sub-item"><a class="header-menu__sub-link" href="#">Ссылка</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item"><a class="header-menu__link" href="/contacts/"><span>Контакты</span></a></div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+      <div class="wrapper__content">
+        <div class="container">
+          <div class="page__breadcrumbs">
+            <div class="breadcrumbs"><a href="#">Главная /&nbsp;</a><span>Lorem page</span></div>
+          </div>
+          <h1 class="page__title">Контакты</h1>
+          <div class="page__grid--noaside page__grid">
+            <div class="page__main">
+              <div class="contacts">
+                <div class="contacts__items">
+                  <div class="contacts__item">
+                    <div class="contact">
+                      <div class="contact__name"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.7969 10.2898C19.7914 10.2898 20.7453 10.6849 21.4485 11.3881C22.1518 12.0914 22.5469 13.0452 22.5469 14.0398C22.5469 14.5323 22.4499 15.0199 22.2614 15.4749C22.073 15.9298 21.7967 16.3432 21.4485 16.6914C21.1003 17.0397 20.6869 17.3159 20.2319 17.5043C19.777 17.6928 19.2893 17.7898 18.7969 17.7898C17.8023 17.7898 16.8485 17.3947 16.1452 16.6914C15.442 15.9882 15.0469 15.0344 15.0469 14.0398C15.0469 13.0452 15.442 12.0914 16.1452 11.3881C16.8485 10.6849 17.8023 10.2898 18.7969 10.2898ZM18.7969 3.53979C21.5816 3.53979 24.2524 4.64604 26.2215 6.61517C28.1906 8.58431 29.2969 11.255 29.2969 14.0398C29.2969 21.9148 18.7969 33.5398 18.7969 33.5398C18.7969 33.5398 8.29688 21.9148 8.29688 14.0398C8.29687 11.255 9.40312 8.58431 11.3723 6.61517C13.3414 4.64604 16.0121 3.53979 18.7969 3.53979ZM18.7969 6.53979C16.8078 6.53979 14.9001 7.32997 13.4936 8.73649C12.0871 10.143 11.2969 12.0507 11.2969 14.0398C11.2969 15.5398 11.2969 18.5398 18.7969 28.6048C26.2969 18.5398 26.2969 15.5398 26.2969 14.0398C26.2969 12.0507 25.5067 10.143 24.1002 8.73649C22.6937 7.32997 20.786 6.53979 18.7969 6.53979Z" fill="#364FB2"/>
+</svg><span>Офис</span>
+                      </div>
+                      <div class="contact__content">Россия, Москва, 119415, г. Москва, ул. Удальцова д. 1А. Бизнес Центр, 8 этаж</div>
+                    </div>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contact">
+                      <div class="contact__name"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30.0469 23.7898C28.2469 23.7898 26.2969 23.4898 24.6469 22.8898H24.1969C23.7469 22.8898 23.4469 23.0398 23.1469 23.3398L19.8469 26.6398C15.6469 24.3898 12.0469 20.9398 9.94687 16.7398L13.2469 13.4398C13.6969 12.9898 13.8469 12.3898 13.5469 11.9398C13.0969 10.2898 12.7969 8.3398 12.7969 6.53979C12.7969 5.78979 12.0469 5.03979 11.2969 5.03979H6.04688C5.29688 5.03979 4.54688 5.78979 4.54688 6.53979C4.54688 20.6398 15.9469 32.0398 30.0469 32.0398C30.7969 32.0398 31.5469 31.2898 31.5469 30.5398V25.2898C31.5469 24.5398 30.7969 23.7898 30.0469 23.7898ZM7.54688 8.03979H9.79688C9.94688 9.38979 10.2469 10.7398 10.5469 11.9398L8.74688 13.7398C8.14688 11.9398 7.69688 9.98979 7.54688 8.03979ZM28.5469 29.0398C26.5969 28.8898 24.6469 28.4398 22.8469 27.8398L24.6469 26.0398C25.8469 26.3398 27.1969 26.6398 28.5469 26.6398V29.0398ZM22.5469 18.5398H25.5469C25.5469 16.5507 24.7567 14.643 23.3502 13.2365C21.9437 11.83 20.036 11.0398 18.0469 11.0398V14.0398C19.2403 14.0398 20.3849 14.5139 21.2289 15.3578C22.0728 16.2017 22.5469 17.3463 22.5469 18.5398ZM28.5469 18.5398H31.5469C31.5469 11.0398 25.5019 5.03979 18.0469 5.03979V8.03979C23.8369 8.03979 28.5469 12.7348 28.5469 18.5398Z" fill="#364FB2"/>
+</svg><span>Телефон</span>
+                      </div>
+                      <div class="contact__content"><b>Отдел дилинга операций</b><br>+7 (495) 215 10 83<br><br><b>Отдел по работе с Клиентами</b><br>+7 (495) 215 10 83</div>
+                    </div>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contact">
+                      <div class="contact__name"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M33.6094 9.53979C33.6094 7.88979 32.2594 6.53979 30.6094 6.53979H6.60938C4.95937 6.53979 3.60938 7.88979 3.60938 9.53979V27.5398C3.60938 29.1898 4.95937 30.5398 6.60938 30.5398H30.6094C32.2594 30.5398 33.6094 29.1898 33.6094 27.5398V9.53979ZM30.6094 9.53979L18.6094 17.0398L6.60938 9.53979H30.6094ZM30.6094 27.5398H6.60938V12.5398L18.6094 20.0398L30.6094 12.5398V27.5398Z" fill="#364FB2"/>
+</svg><span>Эл. почта</span>
+                      </div>
+                      <div class="contact__content">mail@centras.ru</div>
+                    </div>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contact">
+                      <div class="contact__name"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.959 30.5398C22.1416 30.5398 25.1938 29.2755 27.4443 27.0251C29.6947 24.7746 30.959 21.7224 30.959 18.5398C30.959 15.3572 29.6947 12.3049 27.4443 10.0545C25.1938 7.80408 22.1416 6.53979 18.959 6.53979C15.7764 6.53979 12.7241 7.80408 10.4737 10.0545C8.22327 12.3049 6.95898 15.3572 6.95898 18.5398C6.95898 21.7224 8.22327 24.7746 10.4737 27.0251C12.7241 29.2755 15.7764 30.5398 18.959 30.5398ZM18.959 3.53979C20.9288 3.53979 22.8794 3.92778 24.6992 4.6816C26.5191 5.43542 28.1727 6.54031 29.5656 7.93319C30.9585 9.32607 32.0634 10.9797 32.8172 12.7995C33.571 14.6194 33.959 16.57 33.959 18.5398C33.959 22.518 32.3786 26.3334 29.5656 29.1464C26.7525 31.9594 22.9372 33.5398 18.959 33.5398C10.664 33.5398 3.95898 26.7898 3.95898 18.5398C3.95898 14.5615 5.53934 10.7462 8.35238 7.93319C11.1654 5.12015 14.9807 3.53979 18.959 3.53979ZM19.709 11.0398V18.9148L26.459 22.9198L25.334 24.7648L17.459 20.0398V11.0398H19.709Z" fill="#364FB2"/>
+</svg><span>Работа офиса</span>
+                      </div>
+                      <div class="contact__content">Пн-Пт: 09:00 - 18:00<br>Сб-Вс: выходной</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__map">
+                  <div class="contacts__map-inner" id="index-map"></div>
+                </div>
+                <div class="contacts__bottom">
+                  <div class="contacts-director">
+                    <div class="contacts-director__name">Генеральный директор<br>ООО «ИнвестНова»</div>
+                    <div class="contacts-director__info">Берсеков Мурат Мухамедович<br>(опубликовано 06.09.2023, актуально с 05.09.2023 по настоящее время.<br>До 05.09.2023 Чурбанов Игорь Александрович)</div>
+                    <div class="contacts-director__link"><a href="#"><svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30.5 10.5H24.5V7.5L21.5 4.5H15.5L12.5 7.5V10.5H6.5C4.85 10.5 3.5 11.85 3.5 13.5V21C3.5 22.125 4.1 23.07 5 23.595V28.5C5 30.165 6.335 31.5 8 31.5H29C30.665 31.5 32 30.165 32 28.5V23.58C32.885 23.055 33.5 22.095 33.5 21V13.5C33.5 11.85 32.15 10.5 30.5 10.5ZM15.5 7.5H21.5V10.5H15.5V7.5ZM6.5 13.5H30.5V21H23V16.5H14V21H6.5V13.5ZM20 22.5H17V19.5H20V22.5ZM29 28.5H8V24H14V25.5H23V24H29V28.5Z" fill="#364FB2"/>
+</svg><span>Список реквизитов</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__footer">
+        <footer class="footer">
+          <div class="footer__top">
+            <div class="container">
+              <div class="footer__top-container">
+                <div class="footer__up">
+                  <button type="button" data-event="click.scrollUp"><svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25.4512" cy="25.0378" r="24.0182" stroke="#A7B8FB" stroke-width="1.96355"/>
+<path d="M21.3358 28.6295L25.9258 24.0495L30.5158 28.6295L31.9258 27.2195L25.9258 21.2195L19.9258 27.2195L21.3358 28.6295Z" fill="#A7B8FB"/>
+</svg>
+                  </button>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__logo"><a href="#"><img src="/upload/images/logo.png"></a></div>
+                  <div class="footer__desc">ООО «ИнвестНова» российская инвестиционная компания основанная в начале 2004 года.</div>
+                  <div class="footer__last">Прежняя версия сайта<br><a href="https://investnova.ru/">https://investnova.ru/</a></div>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__menu"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Информация</a><a href="#">Правовой режим</a><a href="#">Новости</a><a href="#">Контакты</a></div>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__addr">Россия, Москва, 119415, г.<br>ул. Удальцова д. 1А.<br>Бизнес Центр, 8 этаж</div>
+                  <div class="footer__map"><a href="#">Показать на карте</a></div>
+                  <div class="footer__tel"><a href="tel:+7(495)2151083">+7 (495) 215 10 83</a></div>
+                  <div class="footer__mail"><a href="mailto:mail@centras.ru">mail@centras.ru</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="container">
+              <div class="footer__bottom-container">
+                <div class="footer__info">
+                  <p>© 2004 - 2024, ООО "ИнвестНова" Все права защищены.</p>
+                  <p>Распространение, копирование и изменение материалов сайта, полностью или частично, без получения письменного согласия ООО "ИнвестНова" запрещено. Информация, содержащаяся в материалах настоящего веб-сайта, была подготовлена силами сотрудников ООО "ИнвестНова", предназначается исключительно для сведения клиентов компании и носит справочный вспомогательный характер. ООО "ИнвестНова", в том числе его представители или сотрудники не несут ответственности за любые убытки, возникшие вследствие использования содержания материалов сайта в практической деятельности, а также за достоверность любой информации, приведенной в составе правомерно размещенных на сайте материалов из внешних источников, и любые последствия использования этой информации.</p>
+                </div>
+                <div class="footer__policy"><a href="/policy/">Политика Конфиденциальности</a></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

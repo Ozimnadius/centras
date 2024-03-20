@@ -1,8 +1,10 @@
 @use "../core/ui/mixins" as ui;
 .index-services{
-  &__top{}
+  &__top{
+    margin-bottom: 50px;
+  }
   &__items{
-    margin-top: 50px;
+
   }
   &__item{
     display:grid;

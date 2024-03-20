@@ -99,20 +99,16 @@ function initOther() {
                 controls: []
             });
 
-
             let placemark = new ymaps.Placemark([55.67106206905689, 37.51875749999999],
-                {
-                    balloonContentHeader: 'ООО «ИнвестНова»:',
-                    balloonContentBody: 'Россия, Москва, 119415, г. Москва, ул. Удальцова д. 1А. Бизнес Центр, 8 этаж',
-                    balloonContentFooter: '+7 (495) 215 10 83',
-                },
+                {},
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '/upload/images/baloon.png',
-                    iconImageSize: [40, 56],
-                    iconImageOffset: [-20, -50]
+                    iconImageHref: '/upload/images/baloon-big.png',
+                    iconImageSize: [250, 71],
+                    iconImageOffset: [-20, -65]
                 }
             );
+
 
 
             map.geoObjects.add(placemark);
