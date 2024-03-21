@@ -11,12 +11,19 @@
 
   &--small{
     max-width: 930px;
+    @include ui.lg-block{
+      max-width: 100%;
+    }
   }
 }
 
 .text{
+  &-18{
+    @include ui.Text18;
+  }
+
   &-24{
-    font-size: 24px;
+    @include ui.Text24;
   }
 }
 

@@ -47,21 +47,39 @@ $break_xs: 575.98px;
 @mixin h1 {
   @include h;
   font-size: 64px;
+  @include lg-block {
+    font-size: 48px;
+  }
+  @include md-block {
+    font-size: 32px;
+  }
 }
 
 @mixin h2 {
   @include h;
   font-size: 40px;
+  @include md-block {
+    font-size: 28px;
+  }
 }
 
 @mixin h3 {
   @include h;
   font-size: 36px;
+  @include lg-block {
+    font-size: 30px;
+  }
+  @include md-block {
+    font-size: 24px;
+  }
 }
 
 @mixin h4 {
   @include h;
   font-size: 28px;
+  @include md-block {
+    font-size: 22px;
+  }
 }
 
 @mixin h5 {
@@ -97,6 +115,10 @@ $break_xs: 575.98px;
   h6 {
     @include h6;
   }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
 }
 
 @mixin container {
@@ -107,12 +129,12 @@ $break_xs: 575.98px;
 @mixin content() {
   @include headers;
 
-  h1, h2, h3, h4, h5, h6, table {
+  h1, h2, h3, h4 {
     margin-top: 40px;
     margin-bottom: 20px;
   }
 
-  p, ul, ol, iframe, blockquote {
+  h5, h6, p, ul, ol, iframe, blockquote, table {
     margin: 20px 0;
   }
 
@@ -190,6 +212,10 @@ $break_xs: 575.98px;
     border-left: 4px solid var(--MainRed);
     font-size: 24px;
     font-weight: 700;
+    @include sm-block{
+      font-size: 16px;
+      padding: 10px 0 10px 20px;
+    }
   }
 
   table {
@@ -238,6 +264,9 @@ $break_xs: 575.98px;
 
 @mixin Text24 {
   font-size: 24px;
+  @include sm-block {
+    font-size: 16px;
+  }
 }
 
 @mixin Text20 {
@@ -302,7 +331,7 @@ $break_xs: 575.98px;
 @mixin link-blue {
   color: var(--MainBlue);
 
-  &:visited{
+  &:visited {
     color: var(--MainBlue);
   }
 
@@ -391,6 +420,11 @@ $break_xs: 575.98px;
   border: 1px solid transparent;
   background-color: transparent;
   @include tr;
+  @include md-block {
+    padding: 9px 19px;
+    font-size: 16px;
+    height: 31px;
+  }
 }
 
 @mixin btn-default {

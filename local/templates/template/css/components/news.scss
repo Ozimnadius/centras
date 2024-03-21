@@ -7,6 +7,9 @@
   }
   &__bottom{
     margin-top: 35px;
+    @include ui.md-block{
+      margin-top: 20px;
+    }
   }
 
 }

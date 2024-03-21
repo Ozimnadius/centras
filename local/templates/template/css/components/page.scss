@@ -1,0 +1,35 @@
+@use "../core/ui/mixins" as ui;
+.page {
+  //overflow: hidden;
+  &__breadcrumbs{
+    margin-top: 20px;
+  }
+
+  &__title{
+    margin-top: 20px;
+  }
+
+  &__grid{
+    margin-top: 25px;
+    margin-bottom: 60px;
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap: 130px;
+    @include ui.xlg-block{
+        gap: 86px;
+    }
+    @include ui.lg-block{
+        grid-template-columns: 1fr;
+    }
+
+    &--noaside{
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__aside{
+    @include ui.lg-block{
+      display: none;
+    }
+  }
+}

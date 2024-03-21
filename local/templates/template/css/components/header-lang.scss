@@ -1,14 +1,19 @@
 @use "../core/ui/mixins" as ui;
+
 .header-lang {
   --bg: var(--MainBlue);
   width: 90px;
   display: block;
   cursor: pointer;
+  @include ui.sm-block{
+    width: 75px;
+  }
+
 
   &:hover {
-      @media (hover: hover) and (pointer: fine) {
-        --bg: var(--MainRed);
-      }
+    @media (hover: hover) and (pointer: fine) {
+      --bg: var(--MainRed);
+    }
   }
 
   &__input {
@@ -50,6 +55,9 @@
       height: 30px;
       font-weight: 600;
       font-size: 18px;
+      @include ui.sm-block{
+        font-size: 14px;
+      }
 
       &:nth-child(2) {
         color: var(--White);
@@ -66,6 +74,9 @@
       border-radius: 40px;
       background: var(--bg);
       @include ui.tr;
+      @include ui.sm-block{
+        width: 40px;
+      }
     }
 
   }

@@ -1,25 +1,35 @@
 @use "../core/ui/mixins" as ui;
-.index{
+
+.index {
   padding-top: 40px;
   padding-bottom: 84px;
+  @include ui.xlg-block {
+    padding-top: 20px;
+  }
+  @include ui.lg-block {
+    padding-bottom: 60px;
+  }
+  @include ui.md-block{
+    padding-bottom: 50px;
+  }
 
-  &__advantages{
+  &__advantages {
     @include ui.mt(6);
   }
 
-  &__services{
+  &__services {
     @include ui.mt(6);
   }
 
-  &__news{
+  &__news {
     @include ui.mt(9);
   }
 
-  &__mail{
+  &__mail {
     @include ui.mt(6);
     position: relative;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       position: absolute;
@@ -30,22 +40,28 @@
       background: var(--White);
     }
 
-    .container{
+    .container {
       position: relative;
       z-index: 1;
     }
   }
 
-  &__licences{
+  &__licences {
     padding: 75px 0;
     background: var(--White);
+    @include ui.md-block {
+      padding: 45px 0;
+    }
 
   }
 
-  &__contacts{
+  &__contacts {
     position: relative;
+    @include ui.sm-block{
+      display: none;
+    }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       position: absolute;
@@ -56,7 +72,7 @@
       background: var(--White);
     }
 
-    .container{
+    .container {
       position: relative;
       z-index: 1;
     }

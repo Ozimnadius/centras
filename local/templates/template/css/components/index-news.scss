@@ -1,17 +1,24 @@
 @use "../core/ui/mixins" as ui;
 @use "sass:math";
+
 .index-news {
   &__top {
   }
 
   &__bottom {
     margin-top: 30px;
+    @include ui.md-block {
+      margin-top: 20px;
+    }
   }
 
   &__btns {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    @include ui.md-block {
+      gap: 10px;
+    }
   }
 
   &__btn {
@@ -21,12 +28,17 @@
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 10px;
+    @include ui.md-block {
+      height: 36px;
+      font-size: 12px;
+      padding: 0 20px;
+    }
 
     &:hover {
-        @media (hover: hover) and (pointer: fine) {
-          background-color: var(--MainRed);
-          color: var(--White);
-        }
+      @media (hover: hover) and (pointer: fine) {
+        background-color: var(--MainRed);
+        color: var(--White);
+      }
     }
 
     &.active {
@@ -38,6 +50,9 @@
 
   &__tabs {
     margin-top: 35px;
+    @include ui.md-block {
+      margin-top: 20px;
+    }
   }
 
   &__tab {
@@ -52,24 +67,56 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    align-items: start;
+    @include ui.lg-block{
+        gap: 15px;
+    }
+    @include ui.md-block {
+      gap: 10px 20px;
+    }
+    @include ui.sm-block {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
   }
 
   &__item {
-    display:grid;
+    display: grid;
     grid-template-columns: 265px 1fr;
     gap: 25px;
     align-items: center;
+    @include ui.xlg-block {
+      grid-template-columns: 235px 1fr;
+    }
+    @include ui.lg-block {
+      grid-template-columns: 146px 1fr;
+      gap: 20px;
+    }
+    @include ui.md-block {
+      grid-template-columns: 0 1fr;
+      gap: 0;
+    }
+
     &:hover {
-        @media (hover: hover) and (pointer: fine) {
-          color: var(--MainRed);
-        }
+      @media (hover: hover) and (pointer: fine) {
+        color: var(--MainRed);
+      }
     }
 
     &:nth-child(1) {
       grid-row: 3 span;
-
       display: flex;
       flex-direction: column;
+      gap: 20px;
+      @include ui.lg-block {
+        grid-row: span 4;
+      }
+      @include ui.md-block {
+        gap: 10px;
+      }
+      @include ui.sm-block {
+        grid-row: span;
+      }
     }
   }
 
@@ -78,14 +125,17 @@
     border-radius: 20px;
     overflow: hidden;
     width: 100%;
-
-    &:before{
-      content: '';
-      display: block;
-      padding-top: math.percentage(math.div(480,660));
+    @include ui.lg-block {
+      border-radius: 10px;
     }
 
-    img{
+    &:before {
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(480, 660));
+    }
+
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -95,10 +145,13 @@
     }
   }
 
-  &__wrap{
+  &__wrap {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @include ui.md-block {
+      gap: 6px;
+    }
   }
 
   &__date {
@@ -109,21 +162,27 @@
   &__desc {
     @include ui.Text20;
     font-weight: 600;
+    @include ui.lg-block {
+      font-size: 18px;
+    }
+    @include ui.sm-block {
+      font-size: 16px;
+    }
   }
 
-  &__more{
+  &__more {
     margin-top: 55px;
     display: flex;
     align-items: center;
 
-    &:before,&:after{
+    &:before, &:after {
       content: '';
       height: 1px;
       flex-grow: 1;
       background-color: var(--Gray5);
     }
 
-    button{
+    button {
       @include ui.btn-border-blue;
     }
   }

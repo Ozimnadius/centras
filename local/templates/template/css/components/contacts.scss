@@ -1,19 +1,56 @@
+@use "../core/ui/mixins" as ui;
 @use "sass:math";
+
 .contacts {
 
   &__items {
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include ui.lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 0;
+    }
+    @include ui.sm-block {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
   }
 
   &__item {
     border-left: 1px solid #cecece;
     padding: 15px 35px;
+    display: flex;
+    flex-direction: column;
+    @include ui.lg-block {
+      padding-left: 0;
+    }
+    @include ui.sm-block {
+      border: none;
+      padding: 0;
+    }
 
 
-    &:first-child{
+    &:first-child {
       border: none;
       padding-left: 0;
+    }
+
+    &:nth-child(odd) {
+      @include ui.lg-block {
+        border: none;
+      }
+    }
+
+    &:nth-child(even) {
+      @include ui.lg-block {
+        padding-left: 110px;
+      }
+      @include ui.md-block {
+        padding-left: 45px;
+      }
+      @include ui.sm-block {
+        padding: 0;
+      }
     }
   }
 
@@ -22,21 +59,26 @@
     position: relative;
     border-radius: 13px;
     overflow: hidden;
+
     [class*="copyrights-pane"] {
       display: none !important;
     }
+
     [class*="ground-pane"] {
       filter: grayscale(1);
     }
 
-    &:before{
-      content: '';
-      display: block;
-      padding-top: math.percentage(math.div(632,1340));
+    height: 632px;
+    width: 100%;
+    @include ui.xlg-block {
+      height: 547px;
+    }
+    @include ui.md-block {
+      height: 422px;
     }
   }
 
-  &__map-inner{
+  &__map-inner {
     position: absolute;
     inset: 0;
   }
@@ -47,8 +89,14 @@
 }
 
 .contact {
-  display:grid;
+  display: grid;
   gap: 18px;
+  @include ui.md-block {
+    gap: 10px;
+  }
+  @include ui.sm-block {
+    gap: 8px;
+  }
 
   &__name {
     display: flex;
@@ -62,17 +110,32 @@
   &__content {
     font-size: 18px;
 
-    b{
+    b {
       color: var(--MainBlue);
       font-weight: 500;
     }
+
+    br {
+      @include ui.sm-block {
+        content: '';
+        display: block;
+      }
+    }
+
   }
 }
 
 .contacts-director {
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
+  @include ui.md-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include ui.sm-block {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 
   &__name {
     font-size: 18px;
@@ -82,13 +145,24 @@
 
   &__info {
     font-size: 18px;
+    @include ui.md-block {
+      order: 1;
+      grid-column: span 2;
+    }
+    @include ui.sm-block{
+        grid-column: span 1;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: end;
+    align-items: start;
+    @include ui.sm-block{
+        justify-content: start;
+    }
 
-    a{
+    a {
       display: flex;
       align-items: center;
       gap: 15px;
@@ -96,14 +170,15 @@
       font-weight: 700;
       text-decoration: underline;
       color: var(--MainBlue);
+
       &:hover {
-          @media (hover: hover) and (pointer: fine) {
-            color: var(--MainRed);
-          }
+        @media (hover: hover) and (pointer: fine) {
+          color: var(--MainRed);
+        }
       }
 
-      svg{
-        path{
+      svg {
+        path {
           fill: currentColor;
         }
       }

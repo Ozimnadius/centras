@@ -1,20 +1,41 @@
 @use "../core/ui/mixins" as ui;
-.index-advantages{
-  counter-reset: count;
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
 
-  &__item{
-    display:grid;
+.index-advantages {
+  counter-reset: count;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  @include ui.md-block {
+    gap: 10px;
+  }
+  @include ui.sm-block{
+      grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: grid;
     grid-template-columns: auto 1fr;
     gap: 20px;
     padding: 30px;
     background-color: #eee;
     border-radius: 13px;
+    @include ui.xlg-block {
+      padding: 20px 15px;
+    }
+    @include ui.lg-block {
+      padding: 20px 10px;
+      gap: 10px;
+    }
+    @include ui.md-block {
+      grid-template-columns: 1fr;
+    }
+    @include ui.sm-block{
+      grid-template-columns: auto 1fr;
+      padding: 15px 10px;
+    }
   }
 
-  &__count{
+  &__count {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,10 +45,18 @@
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    @include ui.xlg-block {
+      width: 62px;
+      height: 62px;
+    }
+    @include ui.lg-block {
+      width: 40px;
+      height: 40px;
+    }
 
     &:before {
       counter-increment: count;
-      content: "0"counter(count);
+      content: "0" counter(count);
       display: block;
       font-size: 32px;
       font-weight: 700;
@@ -35,33 +64,63 @@
       line-height: 1;
       position: relative;
       z-index: 1;
+      @include ui.lg-block {
+        font-size: 19px;
+      }
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       position: absolute;
       top: 50%;
       left: 50%;
       background: radial-gradient(66.88% 59.74% at 78.41% 50.31%, #ED6E93 0%, #EC6990 11%, #EB5D8A 22%, #E94980 32%, #E83677 40%, #E22D6F 48%, #D71E62 58%, #CA195B 63%, #BA1353 68%, #A21148 72%, #660D2C 78%, #490C1F 82%, #3D0F1C 95%, #38111C 100%);
-      transform: translate(-50%,-50%) rotate(-90deg);
+      transform: translate(-50%, -50%) rotate(-90deg);
       width: 110px;
       height: 110px;
+      @include ui.xlg-block {
+        width: 87px;
+        height: 87px;
+      }
+      @include ui.lg-block {
+        width: 56px;
+        height: 56px;
+      }
     }
 
   }
-  &__content{
+
+  &__content {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    @include ui.lg-block {
+      gap: 6px;
+    }
   }
-  &__title{
+
+  &__title {
     @include ui.h3;
     color: var(--MainBlue);
+    @include ui.xlg-block {
+      font-size: 32px;
+    }
+    @include ui.lg-block {
+      font-size: 22px;
+    }
+    @include ui.md-block {
+      font-size: 18px;
+    }
+
   }
-  &__desc{
+
+  &__desc {
     font-size: 18px;
     font-weight: 700;
     color: var(--Gray2);
+    @include ui.lg-block {
+      font-size: 14px;
+    }
   }
 }

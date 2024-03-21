@@ -26,12 +26,14 @@
   --spacing: 10px;
   @media (max-width: 1919.98px) {
     --spacing: 8px;
+    --container-padding: 0 40px;
   }
   @media (max-width: 1439.98px) {
     --spacing: 6px;
+    --container-padding: 0 20px;
   }
   @media (max-width: 1023.98px) {
-
+    --container-padding: 0 10px;
   }
   @media (max-width: 767.98px) {
     --spacing: 5px;

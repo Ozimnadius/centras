@@ -8,11 +8,21 @@
     position: absolute;
     top: 84px;
     right: -84px;
+    @include ui.xlg-block {
+      display: none;
+    }
   }
 
   &__top {
     background: url("data:image/svg+xml,%3Csvg width='802' height='570' viewBox='0 0 802 570' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.97891 458.579C1.47424 473.629 -1.47878 491.384 1.59236 508.433C4.42725 523.954 12.2232 538.417 23.799 549.469C42.4621 567.107 69.866 574.044 94.6713 567.459C117.35 561.463 135.777 545.236 144.636 524.072V523.836C164.599 483.153 184.561 442.352 204.523 401.669C216.217 377.918 227.793 354.048 239.487 330.297C251.181 306.545 262.757 282.676 274.451 258.925C281.42 272.917 288.389 286.909 295.358 300.784C305.871 321.949 316.502 343.113 327.014 364.16C340.362 390.969 353.71 417.66 367.057 444.469C379.814 469.984 392.571 495.499 405.328 521.015C408.636 527.717 411.943 534.419 416.55 540.298C427.417 554.173 443.127 564.167 460.609 567.812C465.57 568.87 470.649 569.341 475.846 569.341C481.752 569.341 487.54 568.635 492.974 567.342C516.007 561.933 535.497 545.471 544.829 523.954C545.537 522.425 546.128 520.897 546.6 519.368C547.309 517.722 548.018 516.076 548.727 514.43C549.79 512.078 550.853 509.727 551.798 507.375L555.105 499.967C561.129 486.328 567.153 472.688 573.177 459.049C582.863 437.179 592.431 415.426 602.117 393.556C609.913 375.801 617.827 357.929 625.741 340.174C638.026 312.542 650.192 284.793 662.477 257.044C679.132 219.3 695.787 181.556 712.56 143.812C723.427 119.238 734.294 94.7808 745.043 70.2063C756.973 43.1625 769.021 16.0011 780.951 -11.0427C784.613 -19.2734 788.275 -27.6217 791.937 -35.8524C797.843 -46.5524 801.15 -58.7809 801.15 -71.7149C801.15 -86.7653 796.661 -100.758 788.984 -112.516C781.66 -123.686 771.384 -132.857 759.336 -138.736C749.295 -143.675 737.956 -146.497 726.025 -146.497C703.937 -146.497 682.557 -136.502 668.383 -119.571C662.713 -112.751 658.224 -104.99 655.271 -96.5246C644.286 -71.7149 633.419 -47.0227 622.434 -22.213C602.826 22.1153 583.218 66.3261 563.728 110.654C544.12 155.1 524.512 199.546 504.786 243.874C497.935 259.278 491.084 274.798 484.351 290.202C480.099 299.726 475.964 309.25 471.712 318.774C454.821 285.028 438.048 251.282 421.156 217.536C412.061 199.311 402.966 181.086 393.871 162.861L377.097 129.115C376.271 127.469 375.444 125.94 374.735 124.294C363.632 101.953 352.41 79.6128 341.307 57.2723C339.181 52.9217 336.582 48.924 333.747 45.1613C325.243 33.8735 313.785 24.9373 300.319 19.8813C292.051 16.7066 283.074 15.0604 273.624 15.0604C264.174 15.0604 255.315 16.8242 246.929 19.8813C227.675 27.1713 212.083 42.3394 204.169 61.27C203.815 61.858 203.578 62.5634 203.224 63.1514L192.593 84.7864L184.561 101.248C182.789 105.01 180.899 108.655 179.127 112.418C175.82 119.12 172.513 125.94 169.205 132.642C161.882 147.575 154.558 162.508 147.353 177.323C128.336 216.243 109.318 255.045 90.3009 293.964C67.6217 340.291 44.9426 386.619 22.1453 432.946C19.5467 438.355 16.8299 443.763 14.2313 449.172C12.6957 452.347 11.1601 455.404 9.62455 458.579' fill='%23263679'/%3E%3C/svg%3E%0A") center top no-repeat;
     padding: 80px 0;
+    @include ui.md-block {
+      padding-top: 60px;
+      padding-bottom: 170px;
+    }
+    @include ui.sm-block {
+      padding: 30px 0;
+    }
   }
 
   &__top-container {
@@ -20,6 +30,16 @@
     display: grid;
     grid-template-columns: 5fr 4fr 3fr;
     gap: 20px;
+    @include ui.lg-block {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include ui.md-block {
+      gap: 10px;
+    }
+    @include ui.sm-block {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
   }
 
   &__col {
@@ -34,70 +54,139 @@
     @include ui.Text18;
     margin-top: 25px;
     max-width: 320px;
+    @include ui.md-block {
+      margin-top: 20px;
+      font-size: 16px;
+    }
   }
 
   &__last {
     @include ui.Text20;
     margin-top: 34px;
+    @include ui.md-block {
+      margin-top: 15px;
+    }
+    @include ui.sm-block{
+      font-size: 18px;
+    }
 
     a {
       @include ui.Link20;
       @include ui.link-purple;
+      @include ui.sm-block{
+        font-size: 18px;
+      }
     }
   }
 
   &__menu {
+    margin-top: 20px;
+    margin-left: 10px;
+    @include ui.sm-block{
+      margin: 0;
+    }
+
     a {
-      @include ui.Text20;
+      @include ui.Text24;
       @include ui.link-white;
       display: block;
       padding: 10px 0;
+      @include ui.md-block {
+        padding: 8px 0;
+        font-size: 16px;
+      }
+      @include ui.sm-block{
+        border-bottom: 1px solid var(--White);
+      }
+      &:first-child{
+        @include ui.sm-block{
+          border-top: 1px solid var(--White);
+        }
+      }
     }
   }
 
   &__addr {
     @include ui.Text20;
+    @include ui.md-block {
+      font-size: 16px;
+    }
   }
 
   &__map {
     @include ui.Link;
     @include ui.link-purple;
     margin-top: 10px;
+    font-size: 20px;
+    @include ui.md-block {
+      font-size: 14px;
+    }
   }
 
   &__tel {
     @include ui.Numbers32;
     @include ui.link-purple;
     margin-top: 38px;
+    @include ui.xlg-block {
+      font-size: 30px;
+    }
+    @include ui.md-block {
+      font-size: 18px;
+      margin-top: 25px;
+    }
   }
 
   &__mail {
     @include ui.Text20;
     @include ui.link-white;
     margin-top: 4px;
+    @include ui.md-block {
+      margin-top: 0;
+    }
   }
 
   &__bottom {
     background: #334798;
     padding: 30px 0;
+    @include ui.sm-block{
+      padding: 20px 0;
+    }
   }
 
-  &__bottom-container{
+  &__bottom-container {
     position: relative;
+    @include ui.sm-block{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &__info {
     @include ui.Text14;
-    display:grid;
+    display: grid;
     gap: 20px;
+    @include ui.sm-block{
+      order: 1;
+
+    }
+
+    p:nth-child(1){
+      @include ui.sm-block{
+        order: 1;
+      }
+    }
   }
 
   &__policy {
     position: absolute;
     top: 0;
     right: 0;
+    @include ui.sm-block{
+      position: static;
+    }
 
-    a{
+    a {
       @include ui.Link;
       @include ui.Text14;
       @include ui.link-white;

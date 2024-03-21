@@ -1,6 +1,13 @@
-.service{
-  &__content{}
-  &__mail{
+@use "../core/ui/mixins" as ui;
+
+.service {
+  &__content {
+  }
+
+  &__mail {
     margin-top: 50px;
+    @include ui.sm-block {
+      margin-top: 30px;
+    }
   }
 }

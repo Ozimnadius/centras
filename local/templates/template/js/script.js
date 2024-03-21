@@ -55,14 +55,22 @@ function initSliders() {
     );
 
     new Swiper('.index-licences__swiper', {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 'auto',
+        spaceBetween: 10,
         rewind: true,
         // Navigation arrows
         navigation: {
             nextEl: '.index-licences__next',
             prevEl: '.index-licences__prev',
         },
+        breakpoints:{
+            768:{
+                slidesPerView: 3,
+            },
+            1024:{
+                spaceBetween: 20,
+            }
+        }
     });
 }
 

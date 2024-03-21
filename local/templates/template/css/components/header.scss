@@ -8,40 +8,93 @@
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 30px;
+    @include ui.lg-block {
+      padding: 20px 0;
+    }
+    @include ui.sm-block{
+      padding: 12px 0;
+    }
+  }
+
+  &__open-menu {
+    display: none;
+    @include ui.lg-block {
+      display: flex;
+    }
+    @include ui.sm-block{
+      width: 28px;
+    }
   }
 
   &__left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    @include ui.md-block {
+      gap: 10px;
+    }
   }
+
   &__logo {
+    @include ui.md-block {
+      width: 180px;
+    }
+    @include ui.sm-block{
+      width: 120px;
+    }
   }
 
   &__center {
     display: flex;
     gap: 55px;
     align-items: center;
+    position: relative;
+    @include ui.sm-block{
+      display: none;
+    }
   }
+
   &__addr {
     @include ui.Text16;
     color: var(--Gray3);
+    @include ui.lg-block {
+      display: none;
+    }
   }
+
   &__mail {
-    a{
+    @include ui.xlg-block {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+    @include ui.lg-block {
+      display: none;
+    }
+
+    a {
       @include ui.Text16;
       @include ui.link-gary3;
     }
   }
-  &__info{
-    display:grid;
+
+  &__info {
+    display: grid;
     justify-items: end;
   }
+
   &__phone {
-    a{
+    a {
       @include ui.Numbers24;
       @include ui.link-gary1;
+      @include ui.md-block {
+        font-size: 18px;
+      }
     }
   }
+
   &__callback {
-    button{
+    button {
       @include ui.Link16;
       @include ui.link-blue;
     }
@@ -51,40 +104,64 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    @include ui.sm-block{
+        gap: 6px;
+    }
   }
+
   &__lang {
   }
+
   &__search {
-    a{
+    a {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
       height: 30px;
       padding: 0 16px;
       background: var(--MainBlue);
       color: var(--White);
       border-radius: 100vmax;
+      position: relative;
       @include ui.tr;
+      @include ui.sm-block{
+        font-size: 0;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+
+      }
 
 
       &:hover {
-          @media (hover: hover) and (pointer: fine) {
-            background: var(--MainRed);
-          }
+        @media (hover: hover) and (pointer: fine) {
+          background: var(--MainRed);
+        }
       }
 
-      svg{
+      svg {
         flex-shrink: 0;
-        path{
+        @include ui.sm-block{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        path {
           stroke: currentColor;
         }
       }
     }
   }
 
-
   &__bottom {
+    @include ui.lg-block {
+      display: none;
+    }
   }
+
   &__menu {
   }
 

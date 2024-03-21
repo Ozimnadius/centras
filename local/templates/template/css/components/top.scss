@@ -5,6 +5,9 @@
   justify-content: space-between;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--Gray5);
+  @include ui.md-block{
+    padding-bottom: 15px;
+  }
 
   &__title{
     @include ui.h2;
@@ -18,6 +21,13 @@
     gap: 16px;
     color: var(--Gray3);
     //transition: color var(--transition);
+    @include ui.md-block{
+      font-size: 16px;
+    }
+    @include ui.sm-block{
+      font-size: 14px;
+      gap: 10px;
+    }
 
     &:hover {
         @media (hover: hover) and (pointer: fine) {
@@ -30,6 +40,8 @@
     }
 
     svg{
+      width: 32px;
+      height: 32px;
       background-color: var(--MainBlue);
       border-radius: 20px;
       //transition: background-color var(--transition);

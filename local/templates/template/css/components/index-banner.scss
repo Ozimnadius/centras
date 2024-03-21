@@ -1,42 +1,74 @@
 @use 'sass:math';
 @use "../core/ui/mixins" as ui;
-.index-banner{
+
+.index-banner {
   position: relative;
-  &__swiper{}
-  &__slide{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  &__swiper {
+    width: 100%;
+  }
+
+  &__slide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     align-items: center;
+    @include ui.sm-block {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
   }
-  &__left{
+
+  &__left {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
+    @include ui.md-block {
+      gap: 10px;
+    }
+    @include ui.sm-block {
+      order: 1;
+      align-items: center;
+    }
   }
-  &__title{
+
+  &__title {
     @include ui.h1;
   }
-  &__desc{
+
+  &__desc {
     @include ui.Text18;
+    @include ui.md-block {
+      font-size: 14px;
+    }
   }
-  &__btn{
+
+  &__btn {
     @include ui.btn-blue;
   }
-  &__right{}
-  &__img{
+
+  &__right {
+  }
+
+  &__img {
     border-radius: 30px;
     overflow: hidden;
     position: relative;
-
-    &:before{
-      content: '';
-      display: block;
-      padding-top: math.percentage(math.div(474,660));
+    @include ui.sm-block{
+      border-radius: 20px;
     }
 
-    img{
+    &:before {
+      content: '';
+      display: block;
+      padding-top: math.percentage(math.div(474, 660));
+    }
+
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -47,8 +79,7 @@
   }
 
 
-
-  &__nav{
+  &__nav {
     position: absolute;
     z-index: 11;
     bottom: 0;
@@ -56,8 +87,14 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @include ui.sm-block{
+      position: static;
+      align-self: center;
+    }
   }
-  &__arr{
+
+  &__arr {
     --bg: var(--White);
     --color: var(--Gray4);
     width: 24px;
@@ -71,27 +108,33 @@
     color: var(--Gray4);
 
     &:hover {
-        @media (hover: hover) and (pointer: fine) {
-          --bg: var(--MainRed);
-          --color: var(--White);
-        }
+      @media (hover: hover) and (pointer: fine) {
+        --bg: var(--MainRed);
+        --color: var(--White);
+      }
     }
 
 
-    svg{
-      rect{
+    svg {
+      rect {
         fill: var(--bg);
         @include ui.tr;
       }
-      path{
+
+      path {
         fill: var(--color);
         @include ui.tr;
       }
     }
   }
-  &__prev{}
-  &__next{}
-  &__pag{
+
+  &__prev {
+  }
+
+  &__next {
+  }
+
+  &__pag {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -104,12 +147,12 @@
     --swiper-pagination-bullet-height: 4px;
     --swiper-pagination-bullet-border-radius: 0;
 
-    .swiper-pagination-bullet{
+    .swiper-pagination-bullet {
       --progress: 0;
       overflow: hidden;
       position: relative;
 
-      &:before{
+      &:before {
         content: '';
         display: block;
         position: absolute;
@@ -120,8 +163,8 @@
       }
     }
 
-    .swiper-pagination-bullet-active{
-      &:before{
+    .swiper-pagination-bullet-active {
+      &:before {
         width: var(--progress);
       }
     }
