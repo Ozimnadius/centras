@@ -1,8 +1,66 @@
 header.header
+    .header__mobile
+        .header-mobile
+            .header-mobile__overlay(data-event='click.closeMobileMenu' data-target='.header-mobile')
+            .header-mobile__main
+                .header-mobile__wrap.active
+                    .header-mobile__top
+                        .header-mobile__title Меню
+                        .header-mobile__close
+                            button(type='button' data-event='click.closeMobileMenu')
+                                svg(width='25' height='24' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M19.5469 6.41L18.1369 5L12.5469 10.59L6.95687 5L5.54688 6.41L11.1369 12L5.54688 17.59L6.95687 19L12.5469 13.41L18.1369 19L19.5469 17.59L13.9569 12L19.5469 6.41Z' fill='#2D2D2D')
+                    .header-mobile__bottom
+                        .header-mobile__menu
+                            .header-mobile__item
+                                a.header-mobile__link.root-item(href='/') О компании
+                            .header-mobile__item
+                                a.header-mobile__link.root-item(href='/')
+                                    |Информация
+                                    span(data-event='click.openMobileDrop')
+                                        svg(width='25' height='24' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M9.14078 7.41902L13.7208 11.999L9.14078 16.589L10.5508 17.999L16.5508 11.999L10.5508 5.99902L9.14078 7.41902Z' fill='#2D2D2D')
+                                .header-mobile__drop
+                                    .header-mobile__wrap
+                                        .header-mobile__top
+                                            .header-mobile__back
+                                                button(type='button' data-event='click.backMobileMenu')
+                                                    svg(width='25' height='24' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                        rect(width='24' height='24' rx='6' transform='matrix(-1 0 0 1 24.5469 0)' fill='#F7F7F7')
+                                                        path(d='M15.957 16.58L11.377 12L15.957 7.41L14.547 6L8.54703 12L14.547 18L15.957 16.58Z' fill='#2D2D2D')
+                                                    | Назад
+                                            .header-mobile__close
+                                                button(type='button' data-event='click.closeMobileMenu')
+                                                    svg(width='25' height='24' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M19.5469 6.41L18.1369 5L12.5469 10.59L6.95687 5L5.54688 6.41L11.1369 12L5.54688 17.59L6.95687 19L12.5469 13.41L18.1369 19L19.5469 17.59L13.9569 12L19.5469 6.41Z' fill='#2D2D2D')
+                                        .header-mobile__submenu
+                                            .header-mobile__subitem
+                                                a.header-mobile__sublink(href='/')
+                                                    | Lorem 1
+                                            .header-mobile__subitem
+                                                a.header-mobile__sublink(href='/')
+                                                    | Lorem 2
+                                            .header-mobile__subitem
+                                                a.header-mobile__sublink(href='/')
+                                                    | Lorem 3
+                                            .header-mobile__subitem
+                                                a.header-mobile__sublink(href='/')
+                                                    | Lorem 4
+                        .header-mobile__contacts
+                            .header-mobile__phone
+                                a(href="tel:+7(495)2151083") +7 (495) 215 10 83
+                            .header-mobile__callback
+                                button(type='button' data-fancybox data-type="ajax" data-src="/ajax/getCallbackForm.php") Обратный звонок
+                            .header-mobile__addr
+                                | Россия, г. Москва, 119415,
+                                br
+                                | ул.Удальцова д. 1А. Бизнес Центр, 8 этаж
+                            .header-mobile__email
+                                a(href="mailto:mail@centras.ru") mail@centras.ru
     .header__top
         .header__left
             .header__open-menu
-                button(type='button' data-event='openMobileMenu')
+                button(type='button' data-event='click.openMobileMenu')
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.25 11.9719H39.25V15.6386H6.25V11.9719ZM6.25 21.1386H30.3482V24.8053H6.25V21.1386ZM6.25 30.3053H20.0875V33.9719H6.25V30.3053Z" fill="#333333"/>
                     </svg>
@@ -11,16 +69,16 @@ header.header
                     img(src='/upload/images/logo.png')
         .header__center
             .header__addr
-                |Россия, г. Москва, 119415,
+                | Россия, г. Москва, 119415,
                 br
-                |ул.Удальцова д. 1А. Бизнес Центр, 8 этаж
+                | ул.Удальцова д. 1А. Бизнес Центр, 8 этаж
             .header__mail
                 a(href="mailto:mail@centras.ru") mail@centras.ru
             .header__info
                 .header__phone
                     a(href="tel:+7(495)2151083") +7 (495) 215 10 83
                 .header__callback
-                    button(type='button') Обратный звонок
+                    button(type='button' data-fancybox data-type="ajax" data-src="/ajax/getCallbackForm.php") Обратный звонок
         .header__right
             .header__lang
                 label.header-lang

@@ -11,7 +11,7 @@
     @include ui.lg-block {
       padding: 20px 0;
     }
-    @include ui.sm-block{
+    @include ui.sm-block {
       padding: 12px 0;
     }
   }
@@ -21,7 +21,7 @@
     @include ui.lg-block {
       display: flex;
     }
-    @include ui.sm-block{
+    @include ui.sm-block {
       width: 28px;
     }
   }
@@ -39,7 +39,7 @@
     @include ui.md-block {
       width: 180px;
     }
-    @include ui.sm-block{
+    @include ui.sm-block {
       width: 120px;
     }
   }
@@ -49,7 +49,7 @@
     gap: 55px;
     align-items: center;
     position: relative;
-    @include ui.sm-block{
+    @include ui.sm-block {
       display: none;
     }
   }
@@ -104,8 +104,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    @include ui.sm-block{
-        gap: 6px;
+    @include ui.sm-block {
+      gap: 6px;
     }
   }
 
@@ -125,7 +125,7 @@
       border-radius: 100vmax;
       position: relative;
       @include ui.tr;
-      @include ui.sm-block{
+      @include ui.sm-block {
         font-size: 0;
         padding: 0;
         width: 30px;
@@ -142,7 +142,7 @@
 
       svg {
         flex-shrink: 0;
-        @include ui.sm-block{
+        @include ui.sm-block {
           position: absolute;
           top: 50%;
           left: 50%;

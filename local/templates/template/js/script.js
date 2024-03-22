@@ -14,6 +14,7 @@ function initLibs() {
         });
 
     });
+
 }
 
 function initSliders() {
@@ -63,11 +64,11 @@ function initSliders() {
             nextEl: '.index-licences__next',
             prevEl: '.index-licences__prev',
         },
-        breakpoints:{
-            768:{
+        breakpoints: {
+            768: {
                 slidesPerView: 3,
             },
-            1024:{
+            1024: {
                 spaceBetween: 20,
             }
         }
@@ -75,6 +76,7 @@ function initSliders() {
 }
 
 function initValidators() {
+    $('[data-validate]').validate();
 
 }
 
@@ -118,12 +120,13 @@ function initOther() {
             );
 
 
-
             map.geoObjects.add(placemark);
 
         }
+
         ymaps.ready(init);
     }
+
 }
 
 class Events {
@@ -174,27 +177,7 @@ class Events {
         console.log(elem);
     }
 
-    sendForm(e, elem) {
-        e.preventDefault();
-
-        fetch(elem.action, {
-            method: 'POST',
-            body: new FormData(elem)
-        }).then(response => response.json()).then(function (data) {
-
-            if (data.status) {
-                elem.reset();
-                toastr["success"]("Мы скоро свяжемся с вами.", "Спасибо!");
-            } else {
-                toastr["error"](data.error);
-            }
-
-        }).catch(function (err) {
-            alert('Fetch Error :-S', err);
-        });
-    }
-
-    scrollUp(e,elem){
+    scrollUp(e, elem) {
         window.scrollTo({
             top: 0,
             left: 0,
@@ -208,14 +191,14 @@ class Events {
         alert('Language set');
     }
 
-    openArchive(e, elem){
+    openArchive(e, elem) {
         e.preventDefault();
 
         elem.classList.toggle('active');
         elem.closest('[data-root]').querySelector('[data-target]').classList.toggle('active');
     }
 
-    showMoreNews(e, elem){
+    showMoreNews(e, elem) {
         e.preventDefault();
         const target = elem.closest('[data-root]').querySelector('[data-target]');
         fetch('/ajax/news.php', {
@@ -224,7 +207,7 @@ class Events {
         }).then(response => response.json()).then(function (data) {
 
             if (data.status) {
-                target.insertAdjacentHTML('beforeend',data.html)
+                target.insertAdjacentHTML('beforeend', data.html)
             } else {
                 toastr["error"](data.error);
             }
@@ -250,6 +233,28 @@ class Events {
             .catch(function (err) {
                 alert('Fetch Error :-S', err);
             });
+    }
+
+    openMobileMenu(e, elem) {
+        e.preventDefault();
+        document.querySelector(".header-mobile").classList.add("active");
+        document.querySelector("body").classList.add("ovh");
+    }
+
+    closeMobileMenu(e, elem) {
+        e.preventDefault();
+        document.querySelector(".header-mobile").classList.remove("active");
+        document.querySelector("body").classList.remove("ovh");
+    }
+
+    openMobileDrop(e, elem) {
+        e.preventDefault();
+        elem.closest('a').nextElementSibling.classList.add("active");
+    }
+
+    backMobileMenu(e, elem) {
+        e.preventDefault();
+        elem.closest(".header-mobile__drop").classList.remove("active");
     }
 
 }

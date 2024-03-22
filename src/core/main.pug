@@ -35,12 +35,12 @@ html(lang="ru")
 
             .wrapper__content
                 if !mainPage
-                    div(class=(contentPage && !showAside)?'container--small':'').container
+                    div(class=(contentPage && !showAside) ? 'container--small' : '').container
                         .page__breadcrumbs
-                                include ../components/breadcrumbs/index
+                            include ../components/breadcrumbs/index
                         if showTitle
                             h1.page__title= title
-                        div(class=(!showAside)?'page__grid--noaside':'').page__grid
+                        div(class=(!showAside) ? 'page__grid--noaside' : '').page__grid
                             if showAside
                                 .page__aside
                                     block aside
@@ -55,6 +55,10 @@ html(lang="ru")
 
             .wrapper__footer
                 include ../components/footer/index
+
+
+
+
 
 
 
