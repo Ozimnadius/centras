@@ -13,9 +13,9 @@ header.header
                     .header-mobile__bottom
                         .header-mobile__menu
                             .header-mobile__item
-                                a.header-mobile__link.root-item(href='/') О компании
+                                a.header-mobile__link.root-item(href="#") О компании
                             .header-mobile__item
-                                a.header-mobile__link.root-item(href='/')
+                                a.header-mobile__link.root-item(href="#")
                                     |Информация
                                     span(data-event='click.openMobileDrop')
                                         svg(width='25' height='24' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -35,16 +35,16 @@ header.header
                                                         path(d='M19.5469 6.41L18.1369 5L12.5469 10.59L6.95687 5L5.54688 6.41L11.1369 12L5.54688 17.59L6.95687 19L12.5469 13.41L18.1369 19L19.5469 17.59L13.9569 12L19.5469 6.41Z' fill='#2D2D2D')
                                         .header-mobile__submenu
                                             .header-mobile__subitem
-                                                a.header-mobile__sublink(href='/')
+                                                a.header-mobile__sublink(href="#")
                                                     | Lorem 1
                                             .header-mobile__subitem
-                                                a.header-mobile__sublink(href='/')
+                                                a.header-mobile__sublink(href="#")
                                                     | Lorem 2
                                             .header-mobile__subitem
-                                                a.header-mobile__sublink(href='/')
+                                                a.header-mobile__sublink(href="#")
                                                     | Lorem 3
                                             .header-mobile__subitem
-                                                a.header-mobile__sublink(href='/')
+                                                a.header-mobile__sublink(href="#")
                                                     | Lorem 4
                         .header-mobile__contacts
                             .header-mobile__phone
@@ -66,7 +66,7 @@ header.header
                     </svg>
             .header__logo
                 a(href="/")
-                    img(src='/upload/images/logo.png')
+                    img(src='./upload/images/logo.png')
         .header__center
             .header__addr
                 | Россия, г. Москва, 119415,
@@ -95,13 +95,13 @@ header.header
     .header__bottom
         .header-menu
             .header-menu__item
-                a(href="/about/").header-menu__link
+                a(href="#").header-menu__link
                     span О компании
             .header-menu__item
-                a(href="/news/").header-menu__link
+                a(href="#").header-menu__link
                     span Новости
             .header-menu__item
-                a(href="/info/").header-menu__link
+                a(href="#").header-menu__link
                     span Информация для клиентов
                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.28309 6.88647L9.72559 10.329L13.1681 6.88647L14.2256 7.95147L9.72559 12.4515L5.22559 7.95147L6.28309 6.88647Z" fill="#333333"/>
@@ -120,14 +120,14 @@ header.header
 
 
             .header-menu__item
-                a(href="/legal/").header-menu__link
+                a(href="#").header-menu__link
                     span Правовой режим
                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.28309 6.88647L9.72559 10.329L13.1681 6.88647L14.2256 7.95147L9.72559 12.4515L5.22559 7.95147L6.28309 6.88647Z" fill="#333333"/>
                     </svg>
                 .header-menu__sub
                     .header-menu__sub-item
-                        a(href="#").header-menu__sub-link Ссылка
+                        a(href="/").header-menu__sub-link Ссылка
                     .header-menu__sub-item
                         a(href="#").header-menu__sub-link Ссылка
                     .header-menu__sub-item
